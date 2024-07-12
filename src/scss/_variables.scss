@@ -1,0 +1,30 @@
+@mixin pageSize{
+    width: 100vw;
+    height: 100vh;
+    
+}
+@mixin flex-col{
+    display: flex;
+    flex-direction: column;
+}
+@mixin flex-row{
+    display: flex;
+    flex-direction: row;
+}
+  
+@mixin h1-horizontal{
+    h1{
+        font-size: 55px;
+        margin: 30px 0px 10px 0px;
+        position: relative;
+      }
+      h1::after{
+        position: absolute;
+        border: 1px solid black;
+        content:'';
+        width: 100%;
+        top: 36px;
+        margin-left: 40px;
+        // transition-duration: width 3s;
+      }
+}

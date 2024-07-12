@@ -1,0 +1,15 @@
+@import "_variables";
+
+body{
+    margin: 0;
+    padding: 0;
+   overflow-x: hidden;
+}
+
+
+#index-container{
+    @include flex-row;
+    width: 100%;
+    height: 100%;
+}
+

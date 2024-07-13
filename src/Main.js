@@ -1,41 +1,55 @@
 
 import './css/main.css';
 
+// 폰트
+import { FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faHtml5 , faCss3Alt, faSass , faJs ,faVuejs, faReact , 
+  faNode , faFigma, faGithub
+} from "@fortawesome/free-brands-svg-icons";
+import { faR } from '@fortawesome/free-solid-svg-icons';
 
-// function ProjectComponent(){
 
-
-// }
-// const ProjectComponent = () => {
-
-
-// }
-
+//<FontAwesomeIcon icon="fa-brands fa-css3-alt" /> <FontAwesomeIcon icon="fa-brands fa-github-alt" />
 
 function Main() {
+
+  const iconMap = {
+    faHtml5: faHtml5,
+    faCss3Alt: faCss3Alt,
+    faSass: faSass,
+    faJs : faJs,
+    faVuejs: faVuejs,
+    faReact: faReact,
+    faNode: faNode,
+
+    faGithub:faGithub,
+    faFigma: faFigma,
+  }
+
   const skillFront = [
-    { id: 1 , value: 'HTML5', class: 'HTML5-icon' },
-    { id: 2 , value: 'CSS3', class: 'CSS3-icon' },
-    { id: 3 , value: 'SCSS' , class: 'SCSS-icon' },
-    { id: 4 , value: 'JavaScript' , class: 'JavaScript-icon' },
-    { id: 5 , value: 'Jquery' , class: 'Jquery-icon' },
-    { id: 6 , value: 'Vue.js', class: 'Vue.js-icon' },
-    { id: 7 , value: 'React.js' , class: 'React.js-icon'},
+    { id: 1 , value: 'HTML5', icon: 'faHtml5' },
+    { id: 2 , value: 'CSS3', icon: 'faCss3Alt' },
+    { id: 3 , value: 'SCSS' , icon: 'faSass' },
+    { id: 4 , value: 'JavaScript' , icon: 'faJs' },
+    { id: 5 , value: 'Jquery' , icon: '' },
+    { id: 6 , value: 'Vue.js', icon: 'faVuejs' },
+    { id: 7 , value: 'React.js' , icon: 'faReact'},
   
   ];
   const skillBack = [
-    { id: 1 , value: 'node.js', class: 'node-icon' },
-    { id: 2 , value: 'express.js', class: 'express-icon' },
-    { id: 3 , value: 'MySql' , class: 'MySql-icon' },
-    { id: 4 , value: 'MariaDb' , class: 'MariaDb-icon' },
+    { id: 1 , value: 'node.js', icon: 'faNode' },
+    { id: 2 , value: 'express.js', icon: '' },
+    { id: 3 , value: 'MySql' , icon: '' },
+    { id: 4 , value: 'MariaDb' , icon: '' },
   ];
   const skillEtc = [
-    { id: 1 , value: 'Git', class: 'git-icon' },
+    { id: 1 , value: 'Git', icon: 'faGithub' },
+    { id: 2, value: 'Figma', icon : 'faFigma'}
   ];
 
-  const skillFrontList =  skillFront.map((v)=> <span key={v.id}><i className={v.class}></i>{v.value}</span> );
-  const skillBackList = skillBack.map((v)=> <span key={v.id}><i className={v.class}></i>{v.value}</span> );
-  const skillEtcList = skillEtc.map((v)=> <span key={v.id}><i className={v.class}></i>{v.value}</span> );
+  const skillFrontList =  skillFront.map((v)=> <span key={v.id}><FontAwesomeIcon icon={iconMap[v.icon]} />{v.value}</span> );
+  const skillBackList = skillBack.map((v)=> <span key={v.id}><FontAwesomeIcon icon={iconMap[v.icon]} />{v.value}</span> );
+  const skillEtcList = skillEtc.map((v)=> <span key={v.id}><FontAwesomeIcon icon={iconMap[v.icon]} />{v.value}</span> );
 
   return (
     <div className='main-container'>

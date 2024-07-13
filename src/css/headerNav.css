@@ -3,8 +3,7 @@
 }
 
 #menu {
-  width: 120px;
-  height: 300vh;
+  width: 100px;
   background-color: #373737;
   display: flex;
 }

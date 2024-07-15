@@ -14,9 +14,19 @@ footer .footer-nav {
 footer .footer-nav .git, footer .footer-nav .blog {
   width: 90px;
   height: 90px;
-  margin-right: 20px;
-  background-color: white;
+  margin-left: 50px;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .footer-nav .git .icon, footer .footer-nav .blog .icon {
+  font-size: 80px;
+  color: white;
+}
+footer .footer-nav .git .icon:hover, footer .footer-nav .blog .icon:hover {
+  color: black;
+  transition-duration: 0.3s;
 }
 footer .footer-rights {
   text-align: center;

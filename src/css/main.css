@@ -1,3 +1,6 @@
+.main-container {
+  margin-left: 100px;
+}
 .main-container header {
   width: 100vw;
   height: 100vh;

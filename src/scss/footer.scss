@@ -13,9 +13,20 @@ footer{
         .git, .blog{
             width: 90px;
             height: 90px;
-            margin-right: 20px;
-            background-color: white;
+            margin-left: 50px;
+            // background-color: rgb(255, 151, 151);
             cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .icon{
+                font-size: 80px;
+                color: white;
+            }
+            .icon:hover{
+                color: black;
+                transition-duration: 0.3s;
+            }
         }
     }
 

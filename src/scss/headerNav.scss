@@ -8,8 +8,10 @@
 }
 #menu{
     width: 100px;
-    background-color: #373737;
+    // 373737
+    background-color: $main-color-gray;
     display: flex;
-    
+    border-right: 3px solid rgb(255, 255, 255);
+    // border-right: white;
     
 }   

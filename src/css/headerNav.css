@@ -4,6 +4,7 @@
 
 #menu {
   width: 100px;
-  background-color: #373737;
+  background-color: rgb(56, 54, 58);
   display: flex;
+  border-right: 3px solid rgb(255, 255, 255);
 }

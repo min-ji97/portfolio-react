@@ -12,12 +12,15 @@ import {faHtml5 , faCss3Alt, faSass , faJs ,faVuejs, faReact ,
 
 const PjComponent = ({listData}) =>{
   return (
-    <div className={listData.className}>
-      <img src={listData.img} alt="" />
+    <div className={listData.className}> 
+      <img src={ process.env.PUBLIC_URL + '/images/'+`${listData.img}`  }alt="" />
       <span>{listData.pjName}</span>
     </div>
   )
 };
+
+
+
 
 const SkillComponent = ({listData}) => {
   const iconMap = {
@@ -71,12 +74,12 @@ function Main() {
   const projectLists = [
     { img : '', pjName: 'meta bus game..?' , className: 'project-content--react'},
     { img : '', pjName: 'fruit merge game..?' , className: 'project-content--react'},
-    { img : '', pjName: 'Momentum' , className: 'project-content--js'},
-    { img : '', pjName: 'portfolio-react' , className: 'project-content--react'},
-    { img : '', pjName: '네이버 클론코딩' , className: 'project-content--js'},
-    { img : '', pjName: '스타벅스 클론코딩' , className: 'project-content--js'},
-    { img : '', pjName: 'CRUD게시판 Pet Talk!' , className: 'project-content--vue'},
-    { img : '', pjName: '졸업작품 : 누리다' , className: 'project-content--vue'},
+    { img : 'momentum/thumbnail.png', pjName: 'Momentum' , className: 'project-content--js'},
+    { img : 'portfolio/thumbnail.png', pjName: 'portfolio-react' , className: 'project-content--react'},
+    { img : 'naver/thumbnail.png', pjName: '네이버 클론코딩' , className: 'project-content--js'},
+    { img : 'starbucks/thumbnail.png', pjName: '스타벅스 클론코딩' , className: 'project-content--js'},
+    { img : 'pet_board/thumbnail.png', pjName: 'CRUD게시판 Pet Talk!' , className: 'project-content--vue'},
+    { img : 'noorida/thumbnail.png', pjName: '졸업작품 : 누리다' , className: 'project-content--vue'},
   ]
 
 
@@ -137,9 +140,8 @@ function Main() {
           </div>
         </div>
       </section>
-      <footer></footer>
     </div>
   );
 }
-
+//  <img src={"./images/pet_board/thumbnail.png" } alt="" width={600} height={300} />
 export default Main;

@@ -2,6 +2,8 @@
   display: flex;
   width: 100px;
   height: 100%;
+  top: 0;
+  left: 0;
   position: fixed;
   background-color: rgb(56, 54, 58);
   border-right: 3px solid rgb(255, 255, 255);

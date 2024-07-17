@@ -11,14 +11,13 @@
 
 
 
-.main-container{
-
-  margin-left: 100px;
-
+#main-container{
+  margin-left: 103px;
+  // width: 100vw;
   //  첫번째 페이지 header - minji's portpolio!
   header{
     @include pageSize;
-    width: 100%;
+    width: calc(100vw - 103px);
     font-size: 100px;
     color: red;
     font-weight: bold;
@@ -102,9 +101,7 @@
       flex-wrap: wrap;
       // justify-content: center;
 
-      .project-content--react,
-      .project-content--js,
-      .project-content--vue{
+      .project-content--link{
         width: 400px;
         height: 300px;
         border: 1px solid black;
@@ -113,7 +110,7 @@
         border-radius: 10px;
         display: flex;
         flex-direction: column;
-
+        text-decoration: none;
         img{
           width: 90%;
           margin: auto;
@@ -130,6 +127,7 @@
           text-align: center;
           line-height: 84px;
           color: white;
+         
         }
       }
 

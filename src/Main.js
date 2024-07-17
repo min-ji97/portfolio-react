@@ -1,4 +1,10 @@
 
+import React , { useEffect , useRef } from 'react';
+import { useLocation ,useNavigate , Link} from 'react-router-dom';
+
+import { Outlet } from "react-router-dom";
+
+
 import './css/main.css';
 
 // 폰트
@@ -9,18 +15,34 @@ import {faHtml5 , faCss3Alt, faSass , faJs ,faVuejs, faReact ,
 // import { faR } from '@fortawesome/free-solid-svg-icons'; 아직 안씀!
 
 
+const PjClick = (e)=>{
+  // const navigate = useNavigate();  
+  let className = e.target.parentElement.className.split(" ");
+  console.log(className[1]);
+  // console.log( '클래스이름을 잘 가져옴! :' , e.target.parentElement.className);
+  console.log('데이터 타입을 아주 잘 가져온다~~ 미쳤다 미쳤어:  ', e.target.parentElement.getAttribute('data-type'));
+  // navigate("/petBoard");
+  // console.log('클래스와 :  ',e.,'dataType : ');
+  
+
+}
 
 const PjComponent = ({listData}) =>{
+
+  // const pjTag = document.querySelector(`.${listData.className}`);
+  // console.log(`${listData.className}`, pjTag);
+ 
+
   return (
-    <div className={listData.className}> 
-      <img src={ process.env.PUBLIC_URL + '/images/'+`${listData.img}`  }alt="" />
-      <span>{listData.pjName}</span>
+    <div className={listData.className} data-type={listData.dataType}> 
+      <Link to={listData.path} className='project-content--link'>
+        <img src={ process.env.PUBLIC_URL + '/images/'+`${listData.img}`  }alt="" />
+        <span>{listData.pjName}</span>
+      </Link>
+      
     </div>
   )
 };
-
-
-
 
 const SkillComponent = ({listData}) => {
   const iconMap = {
@@ -47,7 +69,24 @@ const SkillComponent = ({listData}) => {
   )
 };
 
-function Main() {
+const Main = () => {
+
+  const mainHeaderRef = useRef(null);
+  const introduceRef = useRef(null);
+  const projectRef = useRef(null);
+  
+  const location = useLocation();
+
+  useEffect( ()=>{
+    if(location.hash === '#main-container'){
+      mainHeaderRef.current.scrollIntoView({ behavior : 'smooth' });
+    }else if(location.hash === '#introduce'){
+      introduceRef.current.scrollIntoView({ behavior : 'smooth' });
+    }else if(location.hash === '#project'){
+      projectRef.current.scrollIntoView({ behavior : 'smooth' });
+    }
+  },[location]);
+
 
   const skillFront = [
     { value: 'HTML5', icon: 'faHtml5' },
@@ -72,23 +111,23 @@ function Main() {
 
 
   const projectLists = [
-    { img : '', pjName: 'meta bus game..?' , className: 'project-content--react'},
-    { img : '', pjName: 'fruit merge game..?' , className: 'project-content--react'},
-    { img : 'momentum/thumbnail.png', pjName: 'Momentum' , className: 'project-content--js'},
-    { img : 'portfolio/thumbnail.png', pjName: 'portfolio-react' , className: 'project-content--react'},
-    { img : 'naver/thumbnail.png', pjName: '네이버 클론코딩' , className: 'project-content--js'},
-    { img : 'starbucks/thumbnail.png', pjName: '스타벅스 클론코딩' , className: 'project-content--js'},
-    { img : 'pet_board/thumbnail.png', pjName: 'CRUD게시판 Pet Talk!' , className: 'project-content--vue'},
-    { img : 'noorida/thumbnail.png', pjName: '졸업작품 : 누리다' , className: 'project-content--vue'},
+    { img : '', pjName: 'meta bus game..?' , dataType: 'project-content--react' ,  className: 'project-content--' , path : "/toBeContiued"},
+    { img : '', pjName: 'fruit merge game..?' , dataType: 'project-content--react' ,className: 'project-content--', path: "/toBeContiued"},
+    { img : 'momentum/thumbnail.png', pjName: 'Momentum' , dataType: 'project-content--js' , className: 'project-content--momentum', path : '/momentum'},
+    { img : 'portfolio/thumbnail.png', pjName: 'portfolio-react' , dataType: 'project-content--react' , className: 'project-content--portfolio', path: '/portfolio'},
+    { img : 'naver/thumbnail.png', pjName: '네이버 클론코딩' , dataType: 'project-content--js' , className: 'project-content--naver', path:'/naver'},
+    { img : 'starbucks/thumbnail.png', pjName: '스타벅스 클론코딩' , dataType: 'project-content--js' ,className: 'project-content--starbucks', path: "/starbucks"},
+    { img : 'pet_board/thumbnail.png', pjName: 'CRUD게시판 Pet Talk!' , dataType: 'project-content--vue' , className: 'project-content--petBoard', path: "/petBoard"},
+    { img : 'noorida/thumbnail.png', pjName: '졸업작품 : 누리다' , dataType: 'project-content--vue', className: 'project-content--noorida', path: "/noorida"},
   ]
 
 
   return (
-    <div className='main-container'>
+    <div id='main-container' ref={mainHeaderRef}>
 
       <header>minji's portfolio</header>
 
-      <section id='introduce'>
+      <section id='introduce' ref={introduceRef}>
         <div className='about-me'>
           <h1>about me</h1>
           <span>조민지</span>
@@ -126,7 +165,7 @@ function Main() {
       </section>
 
 
-      <section id='project'>
+      <section id='project' ref={projectRef}>
         <h1>PROJECT</h1>
         <div>
           <div className='project-nav'>
@@ -140,6 +179,7 @@ function Main() {
           </div>
         </div>
       </section>
+      <Outlet />
     </div>
   );
 }

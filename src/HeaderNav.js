@@ -1,5 +1,7 @@
 
-import Main from './Main';
+import React from 'react';
+import { Link as RouterLink } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 import './css/headerNav.css';
 
 import { FontAwesomeIcon} from "@fortawesome/react-fontawesome";
@@ -13,25 +15,25 @@ function HeaderNav() {
      
         <div className='header-nav'>
           <div>
-            <a href="#">
+            <RouterLink to = "/Main#main-container">
               <FontAwesomeIcon className="icon" icon={faHouse} />
-            </a>
+            </RouterLink>
           </div>
           <div>
-            <a href="#Main">
+            <RouterLink to="/Main#introduce">
               <FontAwesomeIcon className="icon" icon={faUserLarge} />
-            </a>
+            </RouterLink>
           </div>
           <div>
-            <a href="#">
+            <RouterLink to="/Main#project">
               <FontAwesomeIcon className="icon" icon={faFolderOpen} />
-            </a>
+            </RouterLink>
           </div>
           <div> 
-            <a href="#">
+            <RouterLink to="/Footer#footer">
               {/* contact */}
               <FontAwesomeIcon className="icon" icon={faAddressBook} />
-            </a>
+            </RouterLink>
           </div>
         </div>
       

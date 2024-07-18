@@ -86,12 +86,16 @@
 }
 #main-container #project .project-nav button {
   margin: 30px 5px;
-  background-color: transparent;
+  background-color: white;
   font-size: 30px;
   font-weight: bold;
   width: 200px;
   height: 60px;
   cursor: pointer;
+}
+#main-container #project .project-nav button:focus {
+  background-color: rgb(26, 25, 25);
+  color: white;
 }
 #main-container #project .project-content {
   display: flex;

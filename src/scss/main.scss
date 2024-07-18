@@ -74,6 +74,9 @@
 
 
   // 세번째 페이지 project
+
+ 
+
   #project{
     // @include pageSize;
     @include h1-horizontal;
@@ -85,7 +88,7 @@
     .project-nav{
       button{
         margin: 30px 5px;
-        background-color: transparent;
+        background-color: white;
         font-size: 30px;
         font-weight: bold;
         width: 200px;
@@ -93,6 +96,11 @@
         
         cursor: pointer;
       }
+      button:focus{
+        background-color: rgb(26, 25, 25);
+        color: white;
+      }
+      
     }
 
     
@@ -135,4 +143,12 @@
 
     }
   }
-}
+ 
+} 
+
+
+// .project-nav--active{
+//     background-color: black;
+//     color: rgb(255, 0, 0);
+//     font-size: 40px;
+// }

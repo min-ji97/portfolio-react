@@ -15,23 +15,64 @@ import {faHtml5 , faCss3Alt, faSass , faJs ,faVuejs, faReact ,
 // import { faR } from '@fortawesome/free-solid-svg-icons'; 아직 안씀!
 
 
-const PjClick = (e)=>{
-  // const navigate = useNavigate();  
-  let className = e.target.parentElement.className.split(" ");
-  console.log(className[1]);
-  // console.log( '클래스이름을 잘 가져옴! :' , e.target.parentElement.className);
-  console.log('데이터 타입을 아주 잘 가져온다~~ 미쳤다 미쳤어:  ', e.target.parentElement.getAttribute('data-type'));
-  // navigate("/petBoard");
-  // console.log('클래스와 :  ',e.,'dataType : ');
-  
+const projectNavClick = (e) =>{
 
-}
+  const dataTypeVue = document.querySelectorAll('.project-content--vue');
+  const dataTypeReact = document.querySelectorAll('.project-content--react');
+  const dataTypeJs = document.querySelectorAll('.project-content--js');
+
+  if(e.target.innerText === 'Vue'){
+    dataTypeVue.forEach( v =>{
+      v.style.display = 'block';
+    });
+    dataTypeReact.forEach( v =>{
+      v.style.display = 'none';
+    });
+    dataTypeJs.forEach( v =>{
+      v.style.display = 'none';
+    });
+
+  }else if(e.target.innerText === 'React'){
+
+    dataTypeVue.forEach( v =>{
+      v.style.display = 'none';
+    });
+    dataTypeReact.forEach( v =>{
+      v.style.display = 'block';
+    });
+    dataTypeJs.forEach( v =>{
+      v.style.display = 'none';
+    });
+
+  }else if(e.target.innerText === 'JavaScript'){
+
+    dataTypeVue.forEach( v =>{
+      v.style.display = 'none';
+    });
+    dataTypeReact.forEach( v =>{
+      v.style.display = 'none';
+    });
+    dataTypeJs.forEach( v =>{
+      v.style.display = 'block';
+    });
+
+  }else{ // All
+
+    dataTypeVue.forEach( v =>{
+      v.style.display = 'block';
+    });
+    dataTypeReact.forEach( v =>{
+      v.style.display = 'block';
+    });
+    dataTypeJs.forEach( v =>{
+      v.style.display = 'block';
+    });
+
+
+  }
+}   
 
 const PjComponent = ({listData}) =>{
-
-  // const pjTag = document.querySelector(`.${listData.className}`);
-  // console.log(`${listData.className}`, pjTag);
- 
 
   return (
     <div className={listData.className} data-type={listData.dataType}> 
@@ -111,14 +152,14 @@ const Main = () => {
 
 
   const projectLists = [
-    { img : '', pjName: 'meta bus game..?' , dataType: 'project-content--react' ,  className: 'project-content--' , path : "/toBeContiued"},
-    { img : '', pjName: 'fruit merge game..?' , dataType: 'project-content--react' ,className: 'project-content--', path: "/toBeContiued"},
-    { img : 'momentum/thumbnail.png', pjName: 'Momentum' , dataType: 'project-content--js' , className: 'project-content--momentum', path : '/momentum'},
-    { img : 'portfolio/thumbnail.png', pjName: 'portfolio-react' , dataType: 'project-content--react' , className: 'project-content--portfolio', path: '/portfolio'},
-    { img : 'naver/thumbnail.png', pjName: '네이버 클론코딩' , dataType: 'project-content--js' , className: 'project-content--naver', path:'/naver'},
-    { img : 'starbucks/thumbnail.png', pjName: '스타벅스 클론코딩' , dataType: 'project-content--js' ,className: 'project-content--starbucks', path: "/starbucks"},
-    { img : 'pet_board/thumbnail.png', pjName: 'CRUD게시판 Pet Talk!' , dataType: 'project-content--vue' , className: 'project-content--petBoard', path: "/petBoard"},
-    { img : 'noorida/thumbnail.png', pjName: '졸업작품 : 누리다' , dataType: 'project-content--vue', className: 'project-content--noorida', path: "/noorida"},
+    { img : '', pjName: 'meta bus game..?' , dataType: 'project-content--react' ,  className: 'project-content--react' , path : "/toBeContiued"},
+    { img : '', pjName: 'fruit merge game..?' , dataType: 'project-content--react' ,className: 'project-content--react', path: "/toBeContiued"},
+    { img : 'momentum/thumbnail.png', pjName: 'Momentum' , dataType: 'project-content--js' , className: 'project-content--js', path : '/momentum'},
+    { img : 'portfolio/thumbnail.png', pjName: 'portfolio-react' , dataType: 'project-content--react' , className: 'project-content--react', path: '/portfolio'},
+    { img : 'naver/thumbnail.png', pjName: '네이버 클론코딩' , dataType: 'project-content--js' , className: 'project-content--js', path:'/naver'},
+    { img : 'starbucks/thumbnail.png', pjName: '스타벅스 클론코딩' , dataType: 'project-content--js' ,className: 'project-content--js', path: "/starbucks"},
+    { img : 'pet_board/thumbnail.png', pjName: 'CRUD게시판 Pet Talk!' , dataType: 'project-content--vue' , className: 'project-content--vue', path: "/petBoard"},
+    { img : 'noorida/thumbnail.png', pjName: '졸업작품 : 누리다' , dataType: 'project-content--vue', className: 'project-content--vue', path: "/noorida"},
   ]
 
 
@@ -169,10 +210,10 @@ const Main = () => {
         <h1>PROJECT</h1>
         <div>
           <div className='project-nav'>
-            <button>All</button>
-            <button>Vue</button>
-            <button>React</button>
-            <button>JavaScript</button>
+            <button onClick={projectNavClick}>All</button>
+            <button onClick={projectNavClick}>Vue</button>
+            <button onClick={projectNavClick}>React</button>
+            <button onClick={projectNavClick}>JavaScript</button>
           </div>
           <div className='project-content'>
            {  projectLists.map( lists => <PjComponent listData= {lists}  />) }

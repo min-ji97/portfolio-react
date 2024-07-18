@@ -1,6 +1,125 @@
+@import '_variables';
 
 #project-component{
-    // margin-left: 130px;
-    // min-height: 80vh;
-    // background-color: red;
-}
+    margin: 0px 50px 0px 150px;
+    //    width: 100%;
+    //    height: 100%;
+    h1{
+        margin: 30px;
+
+    }
+    p{
+        font-size: 25px;
+        margin: 5px 10px;
+        line-height: 40px;
+    }
+    strong{
+        color: red;
+    }
+    img{
+        width: 100%;
+        margin: 10px 5px;
+        border: 1px solid black;
+    }
+    .gray-color{
+        color: gray;
+        font-size: 24px;
+        margin-left: 50px;
+    }
+        .pet--login{
+            @include flex-row;
+            div{
+                @include flex-col;
+                img{
+                    margin-bottom: 40px;
+                }
+            }
+        }
+        .pet--register{
+            @include flex-row;
+            p{
+                margin-left: 30px;
+            }
+        }
+        .pet--homeQA{
+            @include flex-row;
+            div{
+                @include flex-col;
+            }
+        }
+        .pet--create{
+            @include flex-col;
+            margin-bottom: 30px;
+            div:first-child{
+                @include flex-row;
+            }
+            div:last-child{
+                border: 1px solid rgb(204, 204, 204);
+                border-radius: 20px;
+                margin: auto;
+                padding: 25px;
+                width: 90%;
+                p{
+                    font-size: 23px;
+                }
+                
+            }
+        }
+        .pet--detail-comment{
+            @include flex-row;
+            img{ width: 60%}
+        }
+        .pet--modify{
+            @include flex-row;
+            margin: 50;
+
+        }
+        .pet--menu{
+            @include flex-col;
+            div{
+                height: 880px;
+                position: relative;
+                img{
+                    width: 80%;
+                }
+                img:nth-child(2){
+                    position: absolute;
+                    width: 80%;
+                    top: 203px;
+                    right: 0;
+                    z-index: 1000;
+                }
+            }
+        }
+        .pet--change{
+            @include flex-col;
+            div{
+                @include flex-row;
+            }
+        }
+        .pet--myWrite{
+            @include flex-col;
+            div{
+                height: 1230px;
+                position: relative;
+                img{
+                    width: 70%;
+                }
+                img:nth-child(2){
+                    position: absolute;
+                    width: 70%;
+                    top: 433px;
+                    right: 0;
+                    z-index: 1000;
+                }
+            }
+        }
+        .pet--myLike{
+            @include flex-row;
+            margin: 50px;
+        }
+
+        .goGithub{
+            @include goGithub;
+        }
+    }

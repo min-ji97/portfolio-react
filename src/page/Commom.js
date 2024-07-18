@@ -1,39 +1,34 @@
 import '../css/commom.css';
 import React from 'react';
-
+import ScrollToTop from '../ScrollToTop';
 
 const SpanTag = ({listData}) => {
-    console.log('왜  여기 들어오긴 하니..?' ,listData )
     return(
         <span>
             {listData}
         </span>
-       
     )
 };
 
-const Commom = (list) => {
+const Commom = ({listData}) => {
     
-
-    let skill = list.listData.skill;
-    console.log('스킬//' ) ;
-
+    let skill = listData.skill;
+ 
     skill.map( value => console.log(value));
 
     return (
-        <div id="project-component">
-            <div className='project-component--title'>
-                <h1>{list.listData.titleH1}</h1>
-                <span>{list.listData.titleSpan}</span>
+        <div id="pj-component">
+            <ScrollToTop></ScrollToTop>
+            <div className='pj-component--title'>
+                <h1>{listData.titleH1}</h1>
+                <span>{listData.titleSpan}</span>
             </div> 
-            <div className='project-component--skill'>
+            <div className='pj-component--skill'>
                 <div>
                     { skill.map( value =>   <SpanTag listData={value}/>) }
-                </div> 
-                
+                </div>
+                <hr />
             </div>
-        
-            
         </div>
     )
 };

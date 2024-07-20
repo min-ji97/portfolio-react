@@ -70,8 +70,18 @@
             img{ width: 60%}
         }
         .pet--modify{
-            @include flex-row;
+            // @include flex-row;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
             margin: 50;
+
+            .aaa{
+                // grid-column: 2/3;
+                grid-row: 2 /4 ;
+            }
+            .bbb{
+                grid-row: 2 /4 ;
+            }
 
         }
         .pet--menu{

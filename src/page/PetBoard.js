@@ -104,7 +104,37 @@ const PetBoard = () =>{
                 <hr />
                 <h1>게시글 및 댓글 수정</h1> 
                 <div className='pet--modify'>  {/* 게시글 및 댓글 수정*/}
-                    <p><strong>캡처를 깜빡했다ㅎㅎ 채워 넣을것..!</strong></p>
+                    <div>
+                        <span>게시글 수정전 1</span>
+                        <img src={process.env.PUBLIC_URL +` /images/pet_board/게시글수정_수정전.png`} alt="" />
+                    </div>
+                    <div>
+                        <span>게시글 수정중 2 </span>
+                        <img src={process.env.PUBLIC_URL +` /images/pet_board/게시글수정_수정중.png`} alt="" />
+                    </div>
+                    <div>
+                        <span>게시글 수정완료3 </span>
+                        <img src={process.env.PUBLIC_URL +` /images/pet_board/게시글수정_수정완료.png`} alt="" />
+                    </div>
+                    <div>
+                        <span>댓글 수정전 4</span>
+                        <img src={process.env.PUBLIC_URL +` /images/pet_board/댓글수정_수정전.png`} alt="" />
+                    </div>
+                    <div className='aaa'>
+                        <span>댓글 수정중 5 </span>
+                        <img src={process.env.PUBLIC_URL +` /images/pet_board/댓글수정_수정중.png`} alt="" />
+                    </div>
+                    <div className='bbb'>
+                        <span>댓글 수정완료 6</span>
+                        <img src={process.env.PUBLIC_URL +` /images/pet_board/댓글수정_수정완료.png`} alt="" />
+                    </div>
+                    <div>
+                        <span>댓글 수정버튼 클릭 7</span>
+                        <img src={process.env.PUBLIC_URL +` /images/pet_board/댓글수정_수정버튼클릭.png`} alt="" />
+                    </div>
+                    <div>
+                        <p> 8 여기에다 설명을 쓸 예정입니당~</p>
+                    </div>
                 </div>
 
                 <hr />

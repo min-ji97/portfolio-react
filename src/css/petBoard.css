@@ -75,9 +75,15 @@
   width: 60%;
 }
 #project-component .pet--modify {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   margin: 50;
+}
+#project-component .pet--modify .aaa {
+  grid-row: 2/4;
+}
+#project-component .pet--modify .bbb {
+  grid-row: 2/4;
 }
 #project-component .pet--menu {
   display: flex;

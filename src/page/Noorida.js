@@ -5,16 +5,21 @@ import Commom from './Commom';
 
 const Noorida = () =>{
     const lists = {
-        titleH1: '졸업작품: 누리다',
+        titleH1: '졸업작품: 위치기반 서비스를 이용한 소셜네트워크 서비스 누리다 ',
         titleSpan: 
-        '위치기반 서비스를 이용한 소셜네트워크 서비스 누리다',
+        'node.js와 vue를 이용하여 사용자의 위치 정보를 얻어와 '+
+        '해당 위치의 웹 서비스를 제공하는 지역 소식 공유 서비스',
+        
         skill: [
+            '개발 인원 : 4명 ',
+            '담당 : 프론트엔드',
             'IDE : Visual Studio Code',
-            'Database : MySQL',
+            'Database : mariaDB',
             '협업 관리 툴 : Git',
-            'Client :  NPM / WebPack / Vue.js /Vuex',
-            'Server : Node.js / Express.js / MySQL',
-            'API : Axios'        
+            '클라우딩 컴퓨팅 : Amazon Web Service',
+            'Client :  NPM WebPack Vue.js vuex',
+            'Server : Node.js Knex.js Express.js mariaDB',
+            'API : Axios',      
         ]
     };
     return (

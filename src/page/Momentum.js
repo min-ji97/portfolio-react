@@ -22,7 +22,9 @@ const Momentum = () =>{
             <Commom listData={lists}/>
 
             <div>
-
+                <div className='goGithub'>
+                    <button><a href="https://min-ji97.github.io/momentum/" target="_blank">해당 페이지로 이동   </a></button>            
+                </div>
 
 
             <hr />

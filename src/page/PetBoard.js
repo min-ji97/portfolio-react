@@ -120,11 +120,11 @@ const PetBoard = () =>{
                         <span>댓글 수정전 4</span>
                         <img src={process.env.PUBLIC_URL +` /images/pet_board/댓글수정_수정전.png`} alt="" />
                     </div>
-                    <div className='aaa'>
+                    <div className='pet--modify--item5'>
                         <span>댓글 수정중 5 </span>
                         <img src={process.env.PUBLIC_URL +` /images/pet_board/댓글수정_수정중.png`} alt="" />
                     </div>
-                    <div className='bbb'>
+                    <div className='pet--modify--item6'>
                         <span>댓글 수정완료 6</span>
                         <img src={process.env.PUBLIC_URL +` /images/pet_board/댓글수정_수정완료.png`} alt="" />
                     </div>
@@ -132,7 +132,7 @@ const PetBoard = () =>{
                         <span>댓글 수정버튼 클릭 7</span>
                         <img src={process.env.PUBLIC_URL +` /images/pet_board/댓글수정_수정버튼클릭.png`} alt="" />
                     </div>
-                    <div>
+                    <div className='pet--modify--item8'>
                         <p> 8 여기에다 설명을 쓸 예정입니당~</p>
                     </div>
                 </div>

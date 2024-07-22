@@ -82,6 +82,16 @@ const PetBoard = () =>{
                 </div>
 
                 <hr />
+                <h1>댓글 작성</h1>
+                <div className='pet--create-comment'>
+                    <div>
+                        <img src={process.env.PUBLIC_URL +` /images/pet_board/댓글작성_작성중.png`} alt="" />
+                        <img src={process.env.PUBLIC_URL +` /images/pet_board/댓글작성_작성완료.png`} alt="" />
+                    </div>
+                    <p> </p>
+                </ div>
+
+                <hr />
                 <h1>상세페이지와 댓글</h1>
                 <div className='pet--detail-comment'>{/* 상세페이지와 댓글 */}
                     <img src={process.env.PUBLIC_URL +` /images/pet_board/home 메인페이지.png`} alt="" />
@@ -133,14 +143,37 @@ const PetBoard = () =>{
                         <img src={process.env.PUBLIC_URL +` /images/pet_board/댓글수정_수정버튼클릭.png`} alt="" />
                     </div>
                     <div className='pet--modify--item8'>
-                        <p> 8 여기에다 설명을 쓸 예정입니당~</p>
+                        <p>게시글 수정</p>
+                        <p>게시글 수정 버튼을 클릭하면, 게시글 작성 component를 불러와 재사용하여, 해당 게시글의 데이터를 넣어주었습니다. </p>
+                        <p>댓글 수정</p>
+                        <p>게시글 수정과 동일합니다.</p>
+                        <p>댓글 수정을 클릭하면 해당 댓글 창에 textarea태그를 추가하여 댓글이 달린 위치에 바로 수정할 수 있도록 하였습니다.</p>
+                        <p>댓글 수정 중, 다른 댓글 수정을 클릭하여 수정하면 안되기 때문에 하나의 댓글만 수정 할 수 있도록 하였습니다.</p>
                     </div>
                 </div>
 
                 <hr />
                 <h1>게시글 및 댓글 삭제</h1> 
                 <div className='pet--delete'>  {/* 게시글 및 댓글 수정*/}
-                    <p><strong>삭제입니당</strong></p>
+                    <div>
+                        <img src={process.env.PUBLIC_URL +` /images/pet_board/게시글삭제_알림.png`} alt="" />
+                        <img src={process.env.PUBLIC_URL +` /images/pet_board/게시글삭제_완료.png`} alt="" />
+                       
+                    </div>
+                    <img src={process.env.PUBLIC_URL +` /images/pet_board/게시글삭제_DB.png`} alt="" />
+                    <div>
+                        <img src={process.env.PUBLIC_URL +` /images/pet_board/댓글삭제_전.png`} alt="" />
+                        <img src={process.env.PUBLIC_URL +` /images/pet_board/댓글삭제_중.png`} alt="" />
+                        <img src={process.env.PUBLIC_URL +` /images/pet_board/댓글삭제_후.png`} alt="" />
+                    </div>
+                    <span>
+                        <p>
+                            게시글과 댓글을 삭제할 때 해당 데이터는 데이터베이스에서 아예 삭제되지 않도록 하였습니다. 
+                        </p>
+                        <p> 삭제한 데이터일 경우 active = 'N' 값을 주었습니다.  </p>
+                        <p> 데이터를 불러올때 active = 'Y'인 값을 가진 게시글과 댓글들만 불러오게 됩니다. </p>
+                    </span>
+                    
                 </div>
 
 
@@ -189,7 +222,7 @@ const PetBoard = () =>{
                 <hr />
                 <h1> 내가 좋아요 한 글</h1>
                 <div className='pet--myLike'>
-                    <p>구현 중입니다~!~!!</p>
+                    <p>구현 할 예정입니다..!</p>
                 </div>
 
                 <hr />

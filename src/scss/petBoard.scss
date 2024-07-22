@@ -13,6 +13,9 @@
         margin: 5px 10px;
         line-height: 40px;
     }
+    hr{
+        margin-top: 80px;
+    }
     strong{
         color: red;
     }
@@ -65,6 +68,12 @@
                 
             }
         }
+        .pet--create-comment{
+            @include flex-col;
+            div{
+                @include flex-row;
+            }
+        }
         .pet--detail-comment{
             @include flex-row;
             img{ width: 60%}
@@ -83,6 +92,7 @@
                 font-size: 25px;
                 color: $main-color-gray;
                 font-weight: bold;
+                // text-align: center;
             }
 
             .pet--modify--item5{
@@ -99,11 +109,26 @@
                 grid-row: 2 / 4 ;
                 grid-column: 3;
             }
+
+     
             .pet--modify--item8{
                 grid-column: 1 / -1;
+                text-align: start;
+               
+                p:nth-child(1),
+                p:nth-child(3){
+                    font-weight: bold;
+                }
             }
 
         }
+        .pet--delete{
+            div{
+                @include flex-row;
+            }
+
+        }
+
         .pet--menu{
             @include flex-col;
             div{

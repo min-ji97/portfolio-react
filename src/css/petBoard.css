@@ -9,6 +9,9 @@
   margin: 5px 10px;
   line-height: 40px;
 }
+#project-component hr {
+  margin-top: 80px;
+}
 #project-component strong {
   color: red;
 }
@@ -67,6 +70,14 @@
 #project-component .pet--create div:last-child p {
   font-size: 23px;
 }
+#project-component .pet--create-comment {
+  display: flex;
+  flex-direction: column;
+}
+#project-component .pet--create-comment div {
+  display: flex;
+  flex-direction: row;
+}
 #project-component .pet--detail-comment {
   display: flex;
   flex-direction: row;
@@ -98,6 +109,15 @@
 }
 #project-component .pet--modify .pet--modify--item8 {
   grid-column: 1/-1;
+  text-align: start;
+}
+#project-component .pet--modify .pet--modify--item8 p:nth-child(1),
+#project-component .pet--modify .pet--modify--item8 p:nth-child(3) {
+  font-weight: bold;
+}
+#project-component .pet--delete div {
+  display: flex;
+  flex-direction: row;
 }
 #project-component .pet--menu {
   display: flex;

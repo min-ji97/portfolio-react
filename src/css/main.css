@@ -129,3 +129,10 @@
   line-height: 84px;
   color: white;
 }
+
+#cursor {
+  position: absolute;
+  background-color: red;
+  width: 10px;
+  height: 10px;
+}

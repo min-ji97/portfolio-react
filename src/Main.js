@@ -162,7 +162,19 @@ const Main = () => {
     { img : 'noorida/thumbnail.png', pjName: '졸업작품 : 누리다' , dataType: 'project-content--vue', className: 'project-content--vue', path: "/noorida"},
   ]
 
+  /* 마우스 커서[s] */
+  var cursor = document.querySelector("#cursor");
 
+    window.addEventListener('mousemove',(e)=>{
+      
+      // console.log('scrollX', e.screenX, e.screenY);
+      // cursor.style.color = e.screenY;
+      // cursor.style.left = e.screenX;
+
+      // cursor.style.left = e.clientX -25 + "px";
+      // cursor.style.top = e.clientY -25  + "px";
+
+    })
   return (
     <div id='main-container' ref={mainHeaderRef}>
 
@@ -220,6 +232,7 @@ const Main = () => {
           </div>
         </div>
       </section>
+      <div id="cursor"></div>
       <Outlet />
     </div>
   );

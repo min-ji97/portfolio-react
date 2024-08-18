@@ -17,7 +17,7 @@ import Naver from './page/Naver';
 import Starbucks from './page/Starbucks';
 import PetBoard from './page/PetBoard';
 import Noorida from './page/Noorida';
-
+import CustomCursor from './CustomCursor';
 
 
 
@@ -27,6 +27,7 @@ root.render(
     <BrowserRouter >
      
         <HeaderNav/>
+        <CustomCursor />
         <div>
           <Routes>
               <Route path='/' element={<Main />} />

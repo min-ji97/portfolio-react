@@ -30,10 +30,10 @@ const App = () =>{
               
                 <div>
                 <Routes>
-                    <Route path='/' element={<Main />} />
+                    <Route path='/' element={<Main setIsHovering={setIsHovering}/>} />
                     <Route path='/Main' element={<Main setIsHovering={setIsHovering} />} />
                    
-                    <Route path='/Footer' element={<Main />} />
+                    <Route path='/Footer' element={<Main setIsHovering={setIsHovering}/>} />
 
                     {/* 다른 페이지들! */}
                     <Route path='/momentum' element={<Momentum />} />

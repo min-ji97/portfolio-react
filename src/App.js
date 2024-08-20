@@ -19,7 +19,7 @@ import Noorida from './page/Noorida';
 
 const App = () =>{
 
-    const [isHovering, setIsHovering] = useState(false);
+    const [isHovering, setIsHovering] = useState(null);
 
     return(
         <div id="app-container">

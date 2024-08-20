@@ -3,28 +3,61 @@ import './css/cursor.css';
 import styled from 'styled-components';
 
 
-// import Main from './Main';
 
-
+// 이거 사용안해도 될거같은걸...?
 const NewCursor = styled.div`
   position: absolute;
 
-  background-color: rgb(255, 186, 186);
+  background-color: green;
+
   left: 0;
   top: 0;
-  width: 50px;
-  height: 50px;
+  width: 20px;
+  height: 20px;
   mix-blend-mode: difference;
   border-radius: 45px;
-  border: 1px solid rgb(255, 186, 186);
+  border: 1px solid rgb(189, 164, 164);
   z-index: 2;
   pointer-events: none;
   transform: translate(-50%, -50%);
+  transition: transform 0.2s;
 
+  transform: ${({ isHovering }) => (isHovering ? "scale(5)" : "scale(1)")};
+  transition: transform 0.3s ease; 
+  
+ &::before {
+    content: "Click!";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    color: blue;
+    font-size: 6px;
+    font-weight: bold;
+    opacity: 0; 
+    transition: opacity 0.3s ease-in-out;
+}
+
+${ (isHovering) =>
+  
+  isHovering === 'btnHover' && 
+  `
+   &::before{
+    opacity: 1 !important;
+  }
+  
+  `
+   
+
+}
+
+}
 
 `
 
-  // transform: ${ (isHovering) ? scale(5) : scale(1) };
+
 
 const CustomCursor = ({isHovering}) =>{
 
@@ -34,7 +67,7 @@ const CustomCursor = ({isHovering}) =>{
   useEffect(()=>{
     const onMouseMove = (e) =>{
     
-
+      
       const span = document.querySelector('#introduce');
       if(mouseRef.current){
         mouseRef.current.style.left = e.pageX + "px";
@@ -53,10 +86,15 @@ const CustomCursor = ({isHovering}) =>{
         <div>
           {/* <div id='cursor' ref={mouseRef}></div> */}
 
-          <NewCursor ref={mouseRef} isHovering={isHovering}
+          <NewCursor  ref={mouseRef} isHovering={isHovering}
           style={{
-            transform : isHovering? "scale(1.5)": "scale(1)"
-          }}/>
+            // transform : isHovering==='spanHover'? "scale(4)": "scale(1)",
+            // transition: "transtorm ease-in 2s",
+
+            // transform : isHovering==='btnHover'? "scale(4)": "scale(1)",
+            // transition: isHovering==='btnHover'? "scale ease-in 2s": "0"
+          }} /> 
+         {console.log('이즈호버링 머냐!',isHovering)}
     
         </div>
     )
@@ -64,7 +102,13 @@ const CustomCursor = ({isHovering}) =>{
 
 export default CustomCursor;
 
-
+/*
+<div id="cursor" ref={mouseRef} isHovering={isHovering}
+          style={{
+            transform : isHovering? "scale(4)": "scale(1)",
+            transition: isHovering? "scale ease-in 2s": "0"
+          }}> </ div>
+*/ 
 
 
 

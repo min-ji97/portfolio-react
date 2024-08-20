@@ -123,25 +123,36 @@ const Main = ( {setIsHovering} ) => {
   useEffect(()=>{
 
     const spanTag = document.querySelectorAll('#introduce span');
+    const pjBtn = document.querySelectorAll('#project .project-nav button');
 
     spanTag.forEach((item)=>{
       item.addEventListener('mouseenter',()=>{
-        setIsHovering(true);
-        console.log('span에 마우스 올렸다~');
+        setIsHovering("spanHover");
       })
     
     })
     spanTag.forEach((item)=>{
       item.addEventListener('mouseleave',()=>{
-        setIsHovering(false);
-        console.log('span에 마우스 내렸다~');
+        setIsHovering(null);
       })
     })
 
+    pjBtn.forEach( item =>{
+      item.addEventListener('mouseenter',()=> setIsHovering("btnHover"));
+    })
+    pjBtn.forEach( item =>{
+      item.addEventListener('mouseleave',()=> setIsHovering(null));
+    })
+
+
     return () =>{
       spanTag.forEach((item)=>{
-        item.removeEventListener('mouseenter',()=>setIsHovering(true));
-        item.removeEventListener('mouseleave',()=>setIsHovering(false));
+        item.removeEventListener('mouseenter',()=>setIsHovering("spanHover"));
+        item.removeEventListener('mouseleave',()=>setIsHovering(null));
+      })
+      pjBtn.forEach((item)=>{
+        item.removeEventListener('mouseenter',()=>setIsHovering("btnHover"));
+        item.removeEventListener('mouseleave',()=>setIsHovering(null));
       })
     }
   },[setIsHovering])

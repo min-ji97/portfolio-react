@@ -21,54 +21,123 @@ const projectNavClick = (e) =>{
   const dataTypeReact = document.querySelectorAll('.project-content--react');
   const dataTypeJs = document.querySelectorAll('.project-content--js');
 
+  const dataAll = document.querySelectorAll('.project-content--vue, .project-content--react,.project-content--js');
+
+  console.log('tab클릭 ',e);
+  // let ex = document.querySelectorAll('.project-content--link');
+  // ex.forEach(v =>{
+  //   v.classList.remove('project--click--content--effect');
+  // })
+
+  dataTypeVue.forEach( v =>{
+    v.classList.remove('project--click--content--effect');
+  });
+  dataTypeReact.forEach( v =>{
+    v.classList.remove('project--click--content--effect');
+  });
+  dataTypeJs.forEach( v =>{
+    v.classList.remove('project--click--content--effect');
+  });
+
+
+  let countDelay = 0; 
   if(e.target.innerText === 'Vue'){
+
+   
     dataTypeVue.forEach( v =>{
       v.style.display = 'block';
+      v.classList.add('project--click--content--effect');
+      
+      v.style.animationDelay= `${countDelay}s`;
+      countDelay += 0.1;
     });
     dataTypeReact.forEach( v =>{
       v.style.display = 'none';
+      // v.classList.remove('project--click--content--effect');
     });
     dataTypeJs.forEach( v =>{
       v.style.display = 'none';
+      // v.classList.remove('project--click--content--effect');
     });
+
+   
+
 
   }else if(e.target.innerText === 'React'){
 
     dataTypeVue.forEach( v =>{
       v.style.display = 'none';
+      // v.classList.remove('project--click--content--effect');
     });
     dataTypeReact.forEach( v =>{
       v.style.display = 'block';
+      v.classList.add('project--click--content--effect');
+      v.style.animationDelay= `${countDelay}s`;
+      countDelay += 0.1;
     });
     dataTypeJs.forEach( v =>{
       v.style.display = 'none';
+      // v.classList.remove('project--click--content--effect');
     });
 
   }else if(e.target.innerText === 'JavaScript'){
 
     dataTypeVue.forEach( v =>{
       v.style.display = 'none';
+      // v.classList.remove('project--click--content--effect');
     });
     dataTypeReact.forEach( v =>{
       v.style.display = 'none';
+      // v.classList.remove('project--click--content--effect');
     });
     dataTypeJs.forEach( v =>{
       v.style.display = 'block';
+      v.classList.add('project--click--content--effect');
+ 
+      v.style.animationDelay= `${countDelay}s`;
+      countDelay += 0.1;
     });
 
   }else{ // All
 
-    dataTypeVue.forEach( v =>{
+    // dataTypeVue.forEach( v =>{
+    //   v.style.display = 'block';
+    //   v.classList.add('project--click--content--effect');
+    // });
+    // dataTypeReact.forEach( v =>{
+    //   v.style.display = 'block';
+    //   v.classList.add('project--click--content--effect');
+    // });
+    // dataTypeJs.forEach( v =>{
+    //   v.style.display = 'block';
+    //   v.classList.add('project--click--content--effect');
+    // });
+
+    dataAll.forEach( v =>{
       v.style.display = 'block';
+      v.classList.add('project--click--content--effect');
+
+      v.style.animationDelay= `${countDelay}s`;
+      countDelay += 0.1;
+    });
+
+  
+
+  }
+
+
+
+  return() =>{
+  // 클래스 삭제
+    dataTypeVue.forEach( v =>{
+      v.classList.remove('project--click--content--effect');
     });
     dataTypeReact.forEach( v =>{
-      v.style.display = 'block';
+      v.classList.remove('project--click--content--effect');
     });
     dataTypeJs.forEach( v =>{
-      v.style.display = 'block';
+      v.classList.remove('project--click--content--effect');
     });
-
-
   }
 }   
 
@@ -94,14 +163,12 @@ const PjComponent = ({listData}) =>{
       offsetX = item.offsetX;
       offsetY = item.offsetY;
 
+      // 미친 이걸써줘야 됐던거야!!!!왜!?????????????????????????????
+      // if(this !== item.target){
+      //   offsetX = offsetX + item.target.offsetLeft;
+      //   offsetY = offsetY + item.target.offsetTop;
+      // }
 
-
-      // let rotateX =  (14/75 * offsetY) - 28;
-      // let rotateY = (-7/50 * offsetX) + 28;
-
-      // let rotateX =  -28;
-      // let rotateY =  28;
-      // console.log(offsetX, offsetY);
         /**
          * 0,0   1,0
          * 
@@ -118,16 +185,31 @@ const PjComponent = ({listData}) =>{
          * 
         */
 
-      //   const width = 400;
-      //   const height = 310;
-      //   const walk = 100;
-      // const xWalk = Math.round((offsetX/width*walk)-(walk/2));
-      // const yWalk = Math.round((offsetY/height*walk)-(walk/2));
+      // projectItem.offsetWidth은420, projectItem.offsetHeight은 310 나옴!
+        const centerX = projectItem.offsetWidth/2;
+        const centerY = projectItem.offsetHeight/2;
 
-      // console.log(item.offset );
+        // console.log(centerX,centerY );
 
-      let rotateY =  (-1/5 * offsetX) + 20;
-      let rotateX = (4/30 * offsetY) - 20;
+        offsetX = offsetX - centerX;
+        offsetY = offsetY -centerY;
+
+
+        if(projectItem !== item.target){
+          offsetX += item.target.offsetLeft;
+          offsetY += item.target.offsetTop;
+        }
+
+  
+
+      
+
+      // let rotateX = (4/30 * offsetY) - 20;
+      // let rotateY =  (-1/5 * offsetX) + 20;
+    
+      let rotateX = (offsetY / centerY) * 20;
+      let rotateY =  (offsetX / centerX) * -20;
+
       projectItem.style.transform = ` perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
       projectItem.style.transition = `transform 0.3s`;
    
@@ -210,6 +292,7 @@ const Main = ( {setIsHovering} ) => {
 
     // span 태그에 닿으면 커서 크기 증가
     spanTag.forEach((item)=>{
+      
       item.addEventListener('mouseenter',()=>{setIsHovering("spanHover")});
     })
     spanTag.forEach((item)=>{

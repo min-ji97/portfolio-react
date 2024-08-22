@@ -4,18 +4,19 @@ body {
 
 #cursor {
   position: absolute;
-  background-color: rgb(187, 141, 185);
+  background-color: rgba(194, 193, 194, 0.219);
   left: 0;
   top: 0;
   width: 20px;
   height: 20px;
   mix-blend-mode: difference;
   border-radius: 45px;
-  border: 1px solid rgb(189, 164, 164);
+  border: 1px solid rgb(95, 94, 94);
   z-index: 2;
   pointer-events: none;
   transform: translate(-50%, -50%);
-  transition: transform 0.2s;
+  transition: transform 0.8s;
+  z-index: 999;
 }
 
 #main-container {
@@ -54,13 +55,9 @@ body {
   font-weight: bold;
   padding: 3px 0px;
 }
-#main-container #introduce span {
-  display: inline-flex;
+#main-container #introduce .about-me span, #main-container #introduce .certificate span, #main-container #introduce .skill span {
+  display: table;
   color: black;
-}
-#main-container #introduce .about-me, #main-container #introduce .certificate, #main-container #introduce .skill {
-  display: flex;
-  flex-direction: column;
 }
 #main-container #introduce .skill-front div:nth-of-type(1),
 #main-container #introduce .skill-back div:nth-of-type(1),
@@ -166,6 +163,28 @@ body {
   display: none; /* Chrome, Safari, Opera*/
 }
 
+#project > div::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+
+/***************** project hover event!!! ************************/
 #project--component--container {
   display: inline-block;
+}
+
+.project--click--content--effect {
+  transition: transform 0.5s;
+  display: inline-block;
+  animation-name: cardhover;
+  animation-duration: 0.5s;
+  perspective: 300px;
+}
+
+@keyframes cardhover {
+  50% {
+    transform: rotateY(-90deg);
+  }
+  100% {
+    transform: rotateY(-180deg);
+  }
 }

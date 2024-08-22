@@ -4,24 +4,27 @@ import styled from 'styled-components';
 
 
 
-// 이거 사용안해도 될거같은걸...?
+
 const NewCursor = styled.div`
   position: absolute;
 
-  background-color: green;
+  /* background-color: rgba(194, 193, 194, 0.219); */
   left: 0;
   top: 0;
   width: 20px;
   height: 20px;
   mix-blend-mode: difference;
   border-radius: 45px;
-  border: 1px solid rgb(189, 164, 164);
+  border: 1px solid rgb(255, 245, 245);
   z-index: 2;
   pointer-events: none;
   transform: translate(-50%, -50%);
   transition: transform 0.2s;
 
   transform: ${({ isHovering }) => (isHovering ? "scale(5)" : "scale(1)")};
+  background-color:  ${({ isHovering }) => (isHovering ? "rgb(233, 233, 233)" : "rgba(194, 193, 194, 0.219)")};
+  border-color: ${({ isHovering }) => (isHovering ? 'rgb(196, 0, 0)':'rgb(255, 245, 245)' )} ;
+  
   transition: transform 0.3s ease; 
   
  &::before {

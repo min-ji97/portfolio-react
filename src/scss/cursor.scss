@@ -7,7 +7,7 @@ body{
 #cursor{
   position: absolute;
 
-  background-color: rgb(187, 141, 185);
+  background-color: rgba(194, 193, 194, 0.219);
 
   left: 0;
   top: 0;
@@ -15,16 +15,16 @@ body{
   height: 20px;
   mix-blend-mode: difference;
   border-radius: 45px;
-  border: 1px solid rgb(189, 164, 164);
+  border: 1px solid rgb(95, 94, 94);
   z-index: 2;
   pointer-events: none;
   transform: translate(-50%, -50%);
-  transition: transform 0.2s;
-
+  transition: transform 0.8s;
+  z-index: 999;
   // transition-property: scale;
   // transform: scale(1);
   // transition: scale ease-in 2s;
-  
+  color: rgb(196, 0, 0);
 }
 
 

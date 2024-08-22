@@ -9,7 +9,6 @@ const NewCursor = styled.div`
   position: absolute;
 
   background-color: green;
-
   left: 0;
   top: 0;
   width: 20px;
@@ -36,24 +35,14 @@ const NewCursor = styled.div`
     color: blue;
     font-size: 6px;
     font-weight: bold;
-    opacity: 0; 
+    padding-left: 2px;
+    line-height: 16px;
+    
+    opacity: ${ ({isHovering}) => (isHovering === 'btnHover' ? 1 : 0 ) };
+    
     transition: opacity 0.3s ease-in-out;
-}
-
-${ (isHovering) =>
-  
-  isHovering === 'btnHover' && 
-  `
-   &::before{
-    opacity: 1 !important;
   }
-  
-  `
-   
 
-}
-
-}
 
 `
 
@@ -94,7 +83,7 @@ const CustomCursor = ({isHovering}) =>{
             // transform : isHovering==='btnHover'? "scale(4)": "scale(1)",
             // transition: isHovering==='btnHover'? "scale ease-in 2s": "0"
           }} /> 
-         {console.log('이즈호버링 머냐!',isHovering)}
+         {/* {console.log('이즈호버링 머냐!',isHovering)} */}
     
         </div>
     )

@@ -117,7 +117,6 @@ body {
   font-weight: bold;
   width: 200px;
   height: 60px;
-  cursor: pointer;
 }
 #main-container #project .project-nav button:focus {
   background-color: rgb(26, 25, 25);
@@ -127,6 +126,9 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  overflow: visible;
+  transform: perspective(1000px);
+  transition: all 0.1s;
 }
 #main-container #project .project-content .project-content--link {
   width: 400px;
@@ -144,7 +146,6 @@ body {
   margin: auto;
   height: 70%;
   background-color: antiquewhite;
-  cursor: pointer;
 }
 #main-container #project .project-content .project-content--link span {
   font-size: 25px;
@@ -154,4 +155,17 @@ body {
   text-align: center;
   line-height: 84px;
   color: white;
+}
+#main-container #project .project-content .project-content--link {
+  overflow: visible;
+}
+#main-container #project .project-content .project-content--link:hover {
+  transition: transform 0.3s;
+}
+#main-container #project .project-content::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+
+#project--component--container {
+  display: inline-block;
 }

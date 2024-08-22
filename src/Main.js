@@ -73,14 +73,97 @@ const projectNavClick = (e) =>{
 }   
 
 const PjComponent = ({listData}) =>{
+  let offsetX = 0;
+  let offsetY = 0;
 
-  return (
-    <div className={listData.className} data-type={listData.dataType}> 
-      <Link to={listData.path} className='project-content--link'>
-        <img src={ process.env.PUBLIC_URL + '/images/'+`${listData.img}`  }alt="" />
-        <span>{listData.pjName}</span>
-      </Link>
+
+
+   
+  useEffect(()=>{
+
+    const projectContent = document.querySelectorAll('#project--component--container');
+    
+    // const hoverProject = document.querySelector('.project-content--link:hover');
+  
+    let projectHover = (item) =>{
       
+      const projectItem = item.currentTarget;
+      // console.log(item);
+
+
+      offsetX = item.offsetX;
+      offsetY = item.offsetY;
+
+
+
+      // let rotateX =  (14/75 * offsetY) - 28;
+      // let rotateY = (-7/50 * offsetX) + 28;
+
+      // let rotateX =  -28;
+      // let rotateY =  28;
+      // console.log(offsetX, offsetY);
+        /**
+         * 0,0   1,0
+         * 
+         * 0,1   1,1
+         * 이라고 할 때!
+         * 
+         * 0,0 일때  -20, 20이여야함
+         * 1,0 일때   -20, -20
+         * 0,1 일때    20, 20 ?
+         * 1,1 일때   20, -20 ?
+         * 
+         * 
+         * 
+         * 
+        */
+
+      //   const width = 400;
+      //   const height = 310;
+      //   const walk = 100;
+      // const xWalk = Math.round((offsetX/width*walk)-(walk/2));
+      // const yWalk = Math.round((offsetY/height*walk)-(walk/2));
+
+      // console.log(item.offset );
+
+      let rotateY =  (-1/5 * offsetX) + 20;
+      let rotateX = (4/30 * offsetY) - 20;
+      projectItem.style.transform = ` perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+      projectItem.style.transition = `transform 0.3s`;
+   
+
+    }
+
+    const projectOut = (item) => {
+
+      const projectItem = item.currentTarget;
+      projectItem.style.transform = ` perspective(350px) rotateX(0deg) rotateY(0deg)`;
+      projectItem.style.transition = `transform 0.3s`;
+    } 
+
+    projectContent.forEach((item)=>{
+      item.addEventListener("mousemove", projectHover);
+      item.addEventListener("mouseleave", projectOut);
+    })
+
+    return () =>{
+      projectContent.forEach((item)=>{
+        item.removeEventListener("mousemove", projectHover );
+        item.removeEventListener("mouseleave", projectOut);
+      })
+    }
+
+  },[]);
+
+  
+  return (
+    <div id='project--component--container'>
+      <div className={listData.className} data-type={listData.dataType}> 
+        <Link to={listData.path} className='project-content--link'>
+          <img src={ process.env.PUBLIC_URL + '/images/'+`${listData.img}`  }alt="" />
+          <span>{listData.pjName}</span>
+        </Link>
+      </div>
     </div>
   )
 };
@@ -123,22 +206,20 @@ const Main = ( {setIsHovering} ) => {
   useEffect(()=>{
 
     const spanTag = document.querySelectorAll('#introduce span');
-    const pjBtn = document.querySelectorAll('#project .project-nav button');
+    const pjBtn = document.querySelectorAll('#project .project-nav button , #project .project-content img');
 
+    // span 태그에 닿으면 커서 크기 증가
     spanTag.forEach((item)=>{
-      item.addEventListener('mouseenter',()=>{
-        setIsHovering("spanHover");
-      })
-    
+      item.addEventListener('mouseenter',()=>{setIsHovering("spanHover")});
     })
     spanTag.forEach((item)=>{
-      item.addEventListener('mouseleave',()=>{
-        setIsHovering(null);
-      })
+      item.addEventListener('mouseleave',()=>{setIsHovering(null);})
     })
 
+    // 프로젝트 Button에 닿으면 커서 크기 증가 + click 
     pjBtn.forEach( item =>{
       item.addEventListener('mouseenter',()=> setIsHovering("btnHover"));
+      item.addEventListener('click',()=> setIsHovering(null));
     })
     pjBtn.forEach( item =>{
       item.addEventListener('mouseleave',()=> setIsHovering(null));

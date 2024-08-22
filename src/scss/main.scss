@@ -104,8 +104,6 @@
         font-weight: bold;
         width: 200px;
         height: 60px;
-        
-        cursor: pointer;
       }
       button:focus{
         background-color: rgb(26, 25, 25);
@@ -119,6 +117,12 @@
       @include flex-row;
       flex-wrap: wrap;
       // justify-content: center;
+
+      // transform-origin: center center;
+      overflow:visible;
+      transform: perspective(1000px);
+      transition: all 0.1s;
+
 
       .project-content--link{
         width: 400px;
@@ -136,7 +140,7 @@
           // padding: 3px;
           height: 70%;
           background-color: antiquewhite;
-          cursor: pointer;
+
         }
         span{
           font-size: 25px;
@@ -149,9 +153,25 @@
          
         }
       }
+      .project-content--link{
+        // transform-origin: center center;
+        overflow: visible;
+        // -ms-overflow-style: none; /* 인터넷 익스플로러 */
+        // scrollbar-width: none; /* 파이어폭스 */
+      }
+      .project-content--link:hover{
+        
+        
+        transition: transform 0.3s;
+      }
+      // .project-content--link:hover::-webkit-scrollbar {
+      //   display: none; /* Chrome, Safari, Opera*/
+      // }
 
 
-
+    }
+    .project-content::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, Opera*/
     }
   }
  
@@ -166,5 +186,11 @@
 
 
 
+
 // 
+#project--component--container{
+  // width: 420px;
+  // height: 310px;
+  display: inline-block;
+}
 

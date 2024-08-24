@@ -25,9 +25,9 @@ const App = () =>{
         <div id="app-container">
             <BrowserRouter >
                 
-                <HeaderNav/>
+                
                 <CustomCursor isHovering={isHovering} />
-              
+                <HeaderNav setIsHovering={setIsHovering}/>
                 <div>
                 <Routes>
                     <Route path='/' element={<Main setIsHovering={setIsHovering}/>} />

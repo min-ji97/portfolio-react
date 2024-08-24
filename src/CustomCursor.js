@@ -25,8 +25,10 @@ const NewCursor = styled.div`
   background-color:  ${({ isHovering }) => (isHovering ? "rgb(233, 233, 233)" : "rgba(194, 193, 194, 0.219)")};
   border-color: ${({ isHovering }) => (isHovering ? 'rgb(196, 0, 0)':'rgb(255, 245, 245)' )} ;
   
+  opacity: ${ ({isHovering}) => (isHovering === 'navHover' ? 0 : 1 ) };
   transition: transform 0.3s ease; 
   
+
  &::before {
     content: "Click!";
     position: absolute;
@@ -46,6 +48,26 @@ const NewCursor = styled.div`
     transition: opacity 0.3s ease-in-out;
   }
 
+  
+ & {
+    content: "";
+    /* position: absolute; */
+    /* top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none; */
+    /* background-color: white; */
+    /* color: blue;
+    font-size: 6px;
+    font-weight: bold;
+    padding-left: 2px;
+    line-height: 16px; */
+    opacity: ${ ({isHovering}) => (isHovering === 'navHover' ? 0 : 1 ) };
+
+    
+    /* transition: opacity 0.3s ease-in-out;*/
+  } 
 
 `
 
@@ -54,7 +76,11 @@ const NewCursor = styled.div`
 const CustomCursor = ({isHovering}) =>{
 
   const mouseRef = useRef(null);
-
+  console.log('뭘 호버했냐?', isHovering);
+  if( isHovering === 'navHover'){
+    console.log('nav를 호버했습니당!!!!!!~!~!');
+    console.log('');
+  }
 
   useEffect(()=>{
     const onMouseMove = (e) =>{

@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
 import './css/headerNav.css';
@@ -9,7 +9,24 @@ import { faHouse , faUserLarge , faFolderOpen ,faAddressBook} from "@fortawesome
 
 // faAddressBook
 
-function HeaderNav() {
+function HeaderNav({setIsHovering}) {
+
+  
+
+  useEffect(()=>{
+    const navTag = document.querySelectorAll('#header-container .header-nav svg');
+    navTag.forEach( item =>{
+      item.addEventListener('mouseenter',() => { setIsHovering('navHover') });
+      item.addEventListener('mouseleave',()=>{setIsHovering(null);})
+    }); 
+    return()=>{
+      navTag.forEach( item =>{
+        item.removeEventListener('mouseenter',() => { setIsHovering('navHover') });
+        item.removeEventListener('mouseleave',() => { setIsHovering(null) });
+      }); 
+    }
+  },[setIsHovering]);
+
   return (
     <div id='header-container'>
      

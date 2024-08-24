@@ -23,7 +23,6 @@ const projectNavClick = (e) =>{
 
   const dataAll = document.querySelectorAll('.project-content--vue, .project-content--react,.project-content--js');
 
-  console.log('tab클릭 ',e);
   // let ex = document.querySelectorAll('.project-content--link');
   // ex.forEach(v =>{
   //   v.classList.remove('project--click--content--effect');

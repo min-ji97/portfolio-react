@@ -9,7 +9,7 @@ import { faHouse , faUserLarge , faFolderOpen ,faAddressBook} from "@fortawesome
 
 // faAddressBook
 
-function HeaderNav({setIsHovering}) {
+function HeaderNav({setIsHovering}) { 
 
   
 
@@ -56,6 +56,6 @@ function HeaderNav({setIsHovering}) {
       
     </div>
   );
-}
+} 
 
 export default HeaderNav;

@@ -2,6 +2,7 @@
 // import '../css/noorida.css';
 import React from 'react';
 import Commom from './Commom';
+import '../css/pageCommom.css';
 
 const Noorida = () =>{
     const lists = {

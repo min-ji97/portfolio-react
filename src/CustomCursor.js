@@ -76,11 +76,6 @@ const NewCursor = styled.div`
 const CustomCursor = ({isHovering}) =>{
 
   const mouseRef = useRef(null);
-  console.log('뭘 호버했냐?', isHovering);
-  if( isHovering === 'navHover'){
-    console.log('nav를 호버했습니당!!!!!!~!~!');
-    console.log('');
-  }
 
   useEffect(()=>{
     const onMouseMove = (e) =>{
@@ -104,15 +99,8 @@ const CustomCursor = ({isHovering}) =>{
         <div>
           {/* <div id='cursor' ref={mouseRef}></div> */}
 
-          <NewCursor  ref={mouseRef} isHovering={isHovering}
-          style={{
-            // transform : isHovering==='spanHover'? "scale(4)": "scale(1)",
-            // transition: "transtorm ease-in 2s",
-
-            // transform : isHovering==='btnHover'? "scale(4)": "scale(1)",
-            // transition: isHovering==='btnHover'? "scale ease-in 2s": "0"
-          }} /> 
-         {/* {console.log('이즈호버링 머냐!',isHovering)} */}
+          <NewCursor  ref={mouseRef} isHovering={isHovering}/> 
+      
     
         </div>
     )

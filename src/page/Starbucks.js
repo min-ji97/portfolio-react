@@ -1,6 +1,8 @@
 // import '../css/starbucks.css';
 import React from 'react';
 import Commom from './Commom';
+import '../css/pageCommom.css';
+
 
 const Starbucks = () =>{
     const lists = {

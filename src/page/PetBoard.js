@@ -1,6 +1,8 @@
 
 import { faListSquares } from '@fortawesome/free-solid-svg-icons';
 import '../css/petBoard.css';
+import '../css/pageCommom.css';
+
 import React from 'react';
 import Commom from './Commom';
 

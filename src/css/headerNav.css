@@ -61,15 +61,25 @@
   display: none; /* Chrome, Safari, Opera*/
 }
 #header-container .header-nav div:nth-child(1) a:hover::before {
-  content: "Home";
+  content: "Back";
+  top: 30px;
+  right: 20px;
+  width: 100%;
+}
+#header-container .header-nav div:nth-child(1) a:hover::after {
+  top: 20px;
+  left: 20px;
 }
 #header-container .header-nav div:nth-child(2) a:hover::before {
-  content: "About Me";
+  content: "Home";
 }
 #header-container .header-nav div:nth-child(3) a:hover::before {
-  content: "Projects";
+  content: "About Me";
 }
 #header-container .header-nav div:nth-child(4) a:hover::before {
+  content: "Projects";
+}
+#header-container .header-nav div:nth-child(5) a:hover::before {
   content: "Contact";
 }
 #header-container .header-nav div::-webkit-scrollbar {
@@ -79,10 +89,8 @@
   display: none;
   position: absolute;
   top: 50px;
-  left: 30px;
-  border: 1px solid rgb(255, 255, 255);
-  width: 50px;
-  height: 50px;
-  background-color: red;
+  left: 22px;
   z-index: 99;
+  width: 50px !important;
+  height: 120px !important;
 }

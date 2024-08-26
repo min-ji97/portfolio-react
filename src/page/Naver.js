@@ -2,6 +2,7 @@
 // import '../css/naver.css';
 import React from 'react';
 import Commom from './Commom';
+import '../css/pageCommom.css';
 
 const Naver = () =>{
     const lists = {

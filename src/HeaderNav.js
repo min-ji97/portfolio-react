@@ -1,28 +1,51 @@
 
 import React, { useEffect } from 'react';
-import { Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink , useLocation , useNavigate } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
 import './css/headerNav.css';
 
 import { FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import { faHouse , faUserLarge , faFolderOpen ,faAddressBook} from "@fortawesome/free-solid-svg-icons";
+import { faHouse , faUserLarge , faFolderOpen ,faAddressBook , faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
-// faAddressBook
+
 
 function HeaderNav({setIsHovering, isRoutePage}) { 
 
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const goToBack = () =>{
+    navigate(-1);
+  }
   useEffect(()=>{
-    const navTag = document.querySelectorAll('#header-container .header-nav svg');
+    
     const returnIcon = document.querySelector(".return--projects");
+
+    if( location.pathname.startsWith("/project")){
+      returnIcon.style.display = "block";
+    }else{
+      returnIcon.style.display = "none";
+    }
+
+  },[location]);
+
+
+  useEffect(()=>{
+
+    const navTag = document.querySelectorAll('#header-container .header-nav svg');
+    
+
+   
 
     navTag.forEach( item =>{
       item.addEventListener('mouseenter',() => { setIsHovering('navHover') });
       item.addEventListener('mouseleave',()=>{setIsHovering(null);})
     }); 
 
-    if(isRoutePage){
-      returnIcon.style.display = "block";
-    }
+
+
+
+
 
 
     return()=>{
@@ -36,13 +59,16 @@ function HeaderNav({setIsHovering, isRoutePage}) {
   return (
     <div id='header-container'>
       
-        <div className='return--projects'>
-          <RouterLink to="/Main#project">
-            아이콘
-          </RouterLink>
-        </div>
+        
 
         <div className='header-nav'>
+
+          <div className='return--projects'>
+            <a onClick={goToBack}>
+              <FontAwesomeIcon className="icon" icon={faArrowLeft} />
+            </a>
+          </div>
+
           <div>
             <RouterLink to = "/Main#main-container">
               <FontAwesomeIcon className="icon" icon={faHouse} />

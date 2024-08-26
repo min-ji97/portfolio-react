@@ -1,6 +1,6 @@
 import React , {useState} from 'react';
 
-import { BrowserRouter , Routes, Route , Navigate } from 'react-router-dom';
+import { BrowserRouter , Routes, Route} from 'react-router-dom';
 
 import Main from './Main';
 import HeaderNav from './HeaderNav';
@@ -19,11 +19,17 @@ import Noorida from './page/Noorida';
 
 const App = () =>{
 
+    // const location = useLocation();
     const [isHovering, setIsHovering] = useState(null);
-
     const [isRoutePage, setIsRoutePage] = useState(null);
 
+    // console.log("?",location);
+
+    // console.log(path);
+
+
     return(
+        
         <div id="app-container">
             <BrowserRouter >
                 
@@ -38,18 +44,19 @@ const App = () =>{
                     <Route path='/Footer' element={<Main setIsHovering={setIsHovering}/>} />
 
                     {/* 다른 페이지들! */}
-                    <Route path='/momentum' element={<Momentum />} />
-                    <Route path='/portfolio' element={<Portfolio />} />
-                    <Route path='/naver' element={<Naver />} />
-                    <Route path='/starbucks' element={<Starbucks />} />
-                    <Route path='/petBoard' element={<PetBoard />} />
-                    <Route path='/noorida' element={<Noorida />} />
+                    <Route path='/project/momentum' element={<Momentum />} />
+                    <Route path='/project/portfolio' element={<Portfolio />} />
+                    <Route path='/project/naver' element={<Naver />} />
+                    <Route path='/project/starbucks' element={<Starbucks />} />
+                    <Route path='/project/petBoard' element={<PetBoard />} />
+                    <Route path='/project/noorida' element={<Noorida />} />
                 </Routes>
                 <Footer/>
                 </div>
             
-            </BrowserRouter>
+                </BrowserRouter>
         </div>
+        
     )
 }
 

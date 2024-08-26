@@ -23,10 +23,6 @@ const projectNavClick = (e) =>{
 
   const dataAll = document.querySelectorAll('.project-content--vue, .project-content--react,.project-content--js');
 
-  // let ex = document.querySelectorAll('.project-content--link');
-  // ex.forEach(v =>{
-  //   v.classList.remove('project--click--content--effect');
-  // })
 
   dataTypeVue.forEach( v =>{
     v.classList.remove('project--click--content--effect');
@@ -145,8 +141,6 @@ const PjComponent = ({listData}) =>{
   let offsetY = 0;
 
 
-
-   
   useEffect(()=>{
 
     const projectContent = document.querySelectorAll('#project--component--container');
@@ -191,7 +185,7 @@ const PjComponent = ({listData}) =>{
         // console.log(centerX,centerY );
 
         offsetX = offsetX - centerX;
-        offsetY = offsetY -centerY;
+        offsetY = offsetY - centerY;
 
 
         if(projectItem !== item.target){
@@ -359,14 +353,14 @@ const Main = ( {setIsHovering} ) => {
 
 
   const projectLists = [
-    { img : '', pjName: 'Chatting game..?' , dataType: 'project-content--react' ,  className: 'project-content--react' , path : "/toBeContiued"},
+    { img : '', pjName: 'Chatting game..?' , dataType: 'project-content--react' ,  className: 'project-content--react' , path : "/project/toBeContiued"},
     // { img : '', pjName: 'fruit merge game..?' , dataType: 'project-content--react' ,className: 'project-content--react', path: "/toBeContiued"},
-    { img : 'momentum/thumbnail.png', pjName: 'Momentum' , dataType: 'project-content--js' , className: 'project-content--js', path : '/momentum'},
-    { img : 'portfolio/thumbnail.png', pjName: 'portfolio-react' , dataType: 'project-content--react' , className: 'project-content--react', path: '/portfolio'},
-    { img : 'naver/thumbnail.png', pjName: '네이버 클론코딩' , dataType: 'project-content--js' , className: 'project-content--js', path:'/naver'},
-    { img : 'starbucks/thumbnail.png', pjName: '스타벅스 클론코딩' , dataType: 'project-content--js' ,className: 'project-content--js', path: "/starbucks"},
-    { img : 'pet_board/thumbnail.png', pjName: 'CRUD게시판 Pet Talk!' , dataType: 'project-content--vue' , className: 'project-content--vue', path: "/petBoard"},
-    { img : 'noorida/thumbnail.png', pjName: '졸업작품 : 누리다' , dataType: 'project-content--vue', className: 'project-content--vue', path: "/noorida"},
+    { img : 'momentum/thumbnail.png', pjName: 'Momentum' , dataType: 'project-content--js' , className: 'project-content--js', path : '/project/momentum'},
+    { img : 'portfolio/thumbnail.png', pjName: 'portfolio-react' , dataType: 'project-content--react' , className: 'project-content--react', path: '/project/portfolio'},
+    { img : 'naver/thumbnail.png', pjName: '네이버 클론코딩' , dataType: 'project-content--js' , className: 'project-content--js', path:'/project/naver'},
+    { img : 'starbucks/thumbnail.png', pjName: '스타벅스 클론코딩' , dataType: 'project-content--js' ,className: 'project-content--js', path: "/project/starbucks"},
+    { img : 'pet_board/thumbnail.png', pjName: 'CRUD게시판 Pet Talk!' , dataType: 'project-content--vue' , className: 'project-content--vue', path: "/project/petBoard"},
+    { img : 'noorida/thumbnail.png', pjName: '졸업작품 : 누리다' , dataType: 'project-content--vue', className: 'project-content--vue', path: "/project/noorida"},
   ]
 
 

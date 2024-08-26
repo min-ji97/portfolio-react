@@ -14,23 +14,20 @@
         .header-nav{
             @include flex-col;
             justify-content: center;
-
+            position: relative;
             div{
                 width: 86px;
                 height: 110px; 
-                // background-color: red;
                 color: white;
                 margin: 0px 5px;
                 display: flex;
                 justify-content: center;
-                // align-items: center;
+
                
                 a{
                     color: white;
                     position: relative;
                     .icon{
-                        // width: 50px;
-                        // height: 50px;
                         font-size: 50px
                    }
                 }
@@ -42,38 +39,65 @@
                 a:hover::before{
                     position: absolute;
                     content: '';
-                    top: 55px;
+                    top: 60px;
                     left: 0;
                     width: 90%;
-                    // height: 20px;
-                    // margin-left: 5px;
-                    height: 30px;
-                    border: 2px solid black;
-                    border-radius: 4px;
+                    border: 2px solid white;
+                    border-radius: 5px;
                     background-color: transparent;
+                    padding: 5px 0px;
+                    color: white;
                     z-index: 99;
+                    text-align: center;
+                    font-size: 12px;
+                    // line-height: -10px;
                 }
-                a:nth-child(1):hover::before{
-                    content: 'Home';
-                }
-                a:nth-child(2):hover::before{
-                    content: 'AboutMe';
-                }
-                a:nth-child(3):hover::before{
-                    content: 'Projects';
-                }
-                a:nth-child(4):hover::before{
-                    content: 'Concat';
-                }
+                a:hover::after{
+                    content:'';
+                    top: 50px;
+                    left: 20px;
 
-
-                div::-webkit-scrollbar {
+                    border: 5px solid transparent;
+                    border-bottom: 5px solid white;
+                    z-index: 99;
+                    position: absolute;
+                }
+                a::-webkit-scrollbar {
                     display: none; /* Chrome, Safari, Opera*/
                 }
+               
             }
+            div:nth-child(1) a:hover::before{
+                content: 'Home';
+            }
+            div:nth-child(2) a:hover::before{
+                content: 'About Me';
+            }
+            div:nth-child(3) a:hover::before{
+                content: 'Projects';
+            }
+            div:nth-child(4) a:hover::before{
+                content: 'Contact';
+            }
+            div::-webkit-scrollbar {
+                display: none; /* Chrome, Safari, Opera*/
+            }
+
+
         }
 
 
+        .return--projects{
+            display: none;
+            position: absolute;
+            top: 50px;
+            left: 30px;
+            border:1px solid rgb(255, 255, 255);
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            z-index: 99;
+        }
 
 
 

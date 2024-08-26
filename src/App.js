@@ -21,13 +21,15 @@ const App = () =>{
 
     const [isHovering, setIsHovering] = useState(null);
 
+    const [isRoutePage, setIsRoutePage] = useState(null);
+
     return(
         <div id="app-container">
             <BrowserRouter >
                 
                 
                 <CustomCursor isHovering={isHovering} />
-                <HeaderNav setIsHovering={setIsHovering}/>
+                <HeaderNav setIsHovering={setIsHovering} isRoutePage={isRoutePage}/>
                 <div>
                 <Routes>
                     <Route path='/' element={<Main setIsHovering={setIsHovering}/>} />

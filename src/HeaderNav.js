@@ -9,16 +9,22 @@ import { faHouse , faUserLarge , faFolderOpen ,faAddressBook} from "@fortawesome
 
 // faAddressBook
 
-function HeaderNav({setIsHovering}) { 
-
-  
+function HeaderNav({setIsHovering, isRoutePage}) { 
 
   useEffect(()=>{
     const navTag = document.querySelectorAll('#header-container .header-nav svg');
+    const returnIcon = document.querySelector(".return--projects");
+
     navTag.forEach( item =>{
       item.addEventListener('mouseenter',() => { setIsHovering('navHover') });
       item.addEventListener('mouseleave',()=>{setIsHovering(null);})
     }); 
+
+    if(isRoutePage){
+      returnIcon.style.display = "block";
+    }
+
+
     return()=>{
       navTag.forEach( item =>{
         item.removeEventListener('mouseenter',() => { setIsHovering('navHover') });
@@ -29,7 +35,13 @@ function HeaderNav({setIsHovering}) {
 
   return (
     <div id='header-container'>
-     
+      
+        <div className='return--projects'>
+          <RouterLink to="/Main#project">
+            아이콘
+          </RouterLink>
+        </div>
+
         <div className='header-nav'>
           <div>
             <RouterLink to = "/Main#main-container">

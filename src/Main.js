@@ -366,8 +366,15 @@ const Main = ( {setIsHovering} ) => {
 
   return (
     <div id='main-container' ref={mainHeaderRef}>
+      <section id="home">
 
-      <header>minji's portfolio</header>
+        <div className="home--title">
+          <div>minji's</div>
+          <div>portfolio</div>
+        </div>
+      
+      </section>
+      
 
       <section id='introduce' ref={introduceRef}>
         <div className='about-me'>

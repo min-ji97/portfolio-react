@@ -16,7 +16,7 @@ body {
   pointer-events: none;
   transform: translate(-50%, -50%);
   transition: transform 0.8s;
-  z-index: 999;
+  z-index: 9999;
   color: rgb(196, 0, 0);
 }
 
@@ -24,14 +24,20 @@ body {
   margin-left: 103px;
   background-color: white;
 }
-#main-container header {
+#main-container #home {
   width: 100vw;
   height: 100vh;
-  width: calc(100vw - 103px);
+  background-color: black;
+  display: flex;
+  padding: 0px 0px 50px 30px;
+}
+#main-container #home .home--title {
   font-size: 100px;
-  color: red;
+  color: white;
   font-weight: bold;
-  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
 }
 #main-container #introduce {
   display: flex;
@@ -132,12 +138,13 @@ body {
   width: 400px;
   height: 300px;
   border: 1px solid black;
-  background-color: rgb(56, 54, 58);
+  background-color: rgb(11, 0, 19);
   margin: 5px 10px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   text-decoration: none;
+  overflow: visible;
 }
 #main-container #project .project-content .project-content--link img {
   width: 90%;
@@ -153,9 +160,6 @@ body {
   text-align: center;
   line-height: 84px;
   color: white;
-}
-#main-container #project .project-content .project-content--link {
-  overflow: visible;
 }
 #main-container #project .project-content .project-content--link:hover {
   transition: transform 0.3s;

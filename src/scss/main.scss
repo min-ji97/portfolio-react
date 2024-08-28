@@ -10,22 +10,30 @@
   }
 }
 
-
-
 #main-container{
   margin-left: 103px;
   background-color: white;
   // width: 100vw;
   //  첫번째 페이지 header - minji's portpolio!
-  header{
+
+  #home{
     @include pageSize;
-    width: calc(100vw - 103px);
-    font-size: 100px;
-    color: red;
-    font-weight: bold;
-    // padding: 200px 100px;
-    background-color: aliceblue;
+  
+    background-color: black;
+    display: flex;
+    padding: 0px 0px 50px 30px;
+    .home--title{
+      font-size: 100px;
+      color: white;
+      font-weight: bold;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+    }
+  
   }
+ 
 
 
   // 두번째 페이지 about-me / certificate / skill
@@ -125,7 +133,7 @@
 
       // transform-origin: center center;
       overflow:visible;
-      transform: perspective(1000px);
+      transform: perspective(1000px) ;
       transition: all 0.1s;
 
 
@@ -133,12 +141,15 @@
         width: 400px;
         height: 300px;
         border: 1px solid black;
-        background-color: rgb(56, 54, 58);
+        background-color: $main-color;
         margin: 5px 10px;
         border-radius: 10px;
         display: flex;
         flex-direction: column;
         text-decoration: none;
+
+        overflow: visible;
+
         img{
           width: 90%;
           margin: auto;
@@ -160,7 +171,7 @@
       }
       .project-content--link{
         // transform-origin: center center;
-        overflow: visible;
+        // overflow: visible;
         // -ms-overflow-style: none; /* 인터넷 익스플로러 */
         // scrollbar-width: none; /* 파이어폭스 */
       }
@@ -208,7 +219,7 @@
   // top: 50px;
   // left: 50px;
   display: inline-block;
-  // transform: rotateY(90deg);
+  // transform: rotateY(180deg);
   animation-name: cardhover;
   animation-duration: 0.5s;
   perspective: 300px;

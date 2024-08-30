@@ -4,6 +4,8 @@ import { useLocation ,useNavigate , Link} from 'react-router-dom';
 
 import { Outlet } from "react-router-dom";
 
+import ReactFullpage from '@fullpage/react-fullpage';
+
 
 import './css/main.css';
 
@@ -353,7 +355,7 @@ const Main = ( {setIsHovering} ) => {
 
 
   const projectLists = [
-    { img : '', pjName: 'Chatting game..?' , dataType: 'project-content--react' ,  className: 'project-content--react' , path : "/project/toBeContiued"},
+    // { img : '', pjName: 'Chatting game..?' , dataType: 'project-content--react' ,  className: 'project-content--react' , path : "/project/toBeContiued"},
     // { img : '', pjName: 'fruit merge game..?' , dataType: 'project-content--react' ,className: 'project-content--react', path: "/toBeContiued"},
     { img : 'momentum/thumbnail.png', pjName: 'Momentum' , dataType: 'project-content--js' , className: 'project-content--js', path : '/project/momentum'},
     { img : 'portfolio/thumbnail.png', pjName: 'portfolio-react' , dataType: 'project-content--react' , className: 'project-content--react', path: '/project/portfolio'},
@@ -368,6 +370,9 @@ const Main = ( {setIsHovering} ) => {
     <div id='main-container' ref={mainHeaderRef}>
       <section id="home">
 
+        {/* <canvas>
+          
+        </canvas> */}
         <div className="home--title">
           <div>minji's</div>
           <div>portfolio</div>

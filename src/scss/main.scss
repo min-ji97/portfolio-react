@@ -13,18 +13,19 @@
 #main-container{
   margin-left: 103px;
   background-color: white;
+  
   // width: 100vw;
   //  첫번째 페이지 header - minji's portpolio!
 
   #home{
     @include pageSize;
   
-    background-color: black;
+    // background-color: black;
     display: flex;
     padding: 0px 0px 50px 30px;
     .home--title{
       font-size: 100px;
-      color: white;
+      color: rgb(240, 156, 156);
       font-weight: bold;
 
       display: flex;
@@ -219,7 +220,7 @@
   // top: 50px;
   // left: 50px;
   display: inline-block;
-  // transform: rotateY(180deg);
+  // transform: rotateY(90deg);
   animation-name: cardhover;
   animation-duration: 0.5s;
   perspective: 300px;

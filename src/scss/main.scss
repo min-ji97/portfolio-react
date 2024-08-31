@@ -40,6 +40,7 @@
   // 두번째 페이지 about-me / certificate / skill
   #introduce{
 
+    // height: 100vh;
     // @include pageSize;
     @include flex-col;
     @include h1-horizontal;

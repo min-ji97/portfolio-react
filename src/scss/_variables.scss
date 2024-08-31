@@ -12,10 +12,10 @@ $main-color :rgb(56, 54, 58);
 // mixin
 
 @mixin pageSize{
-    width: 100vw;
-    height: 100vh;
-    
+    // width: 100vw;
+    // height: 100vh;
 }
+
 @mixin flex-col{
     display: flex;
     flex-direction: column;

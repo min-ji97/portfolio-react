@@ -4,7 +4,9 @@ import { useLocation ,useNavigate , Link} from 'react-router-dom';
 
 import { Outlet } from "react-router-dom";
 
-import ReactFullpage from '@fullpage/react-fullpage';
+// import ReactFullpage from '@fullpage/react-fullpage';
+
+import {SectionsContainer, Section} from 'react-fullpage';
 
 
 import './css/main.css';
@@ -365,75 +367,99 @@ const Main = ( {setIsHovering} ) => {
     { img : 'noorida/thumbnail.png', pjName: '졸업작품 : 누리다' , dataType: 'project-content--vue', className: 'project-content--vue', path: "/project/noorida"},
   ]
 
+  let options ={
+    anchors: ['sectionOne', 'sectionTwo', 'sectionThree'],
+
+    activeClass:          'active', // the class that is appended to the sections links
+    arrowNavigation:      true, // use arrow keys
+    className:            'SectionContainer', // the class name for the section container
+    delay:                1000, // the scroll animation speed
+    navigation:           true, // use dots navigatio
+    scrollBar:            false, // use the browser default scrollbar
+    sectionClassName:     'Section', // the section class name
+    sectionPaddingTop:    '0', // the section top padding
+    sectionPaddingBottom: '0', // the section bottom padding
+    verticalAlign:        false,// align the content of each section vertical
+    scrollHorizontally: true
+  };
 
   return (
+    
     <div id='main-container' ref={mainHeaderRef}>
-      <section id="home">
+      <SectionsContainer {...options}>
 
-        {/* <canvas>
-          
-        </canvas> */}
-        <div className="home--title">
-          <div>minji's</div>
-          <div>portfolio</div>
-        </div>
-      
-      </section>
-      
-
-      <section id='introduce' ref={introduceRef}>
-        <div className='about-me'>
-          <h1>about me</h1>
-          <span>조민지</span>
-          <span>1997.11.10</span>
-          <span>address: 경기도 이천</span>
-          <span>mail: whalswl576@gmail.com </span>
-          <span>학력: 남서울대학교 컴퓨터소프트웨어학과 졸업</span>
-        </div>
-        <div className='certificate'>
-          <h1>certificate</h1>
-          <span>정보처리기사</span>
-          <span>MOS MASTER</span>
-        </div>
-        <div className='skill'>
-          <h1>skill</h1>
-          <div className='skill-front'>
-            <div>Front-End</div>
-            <div>
-              { skillFront.map( lists => <SkillComponent listData={lists}/>) }
+        <Section>
+          <section id="home">
+            {/* <canvas>
+              
+            </canvas> */}
+            <div className="home--title">
+              <div>minji's</div>
+              <div>portfolio</div>
             </div>
-          </div>
-          <div className='skill-back'>
-            <div>Back-End</div>
-            <div>
-              { skillBack.map( lists => <SkillComponent listData={lists}/>)}
+          </section>
+        </Section>
+
+        <Section>
+          <section id='introduce' ref={introduceRef}>
+            <div className='about-me'>
+              <h1>about me</h1>
+              <span>조민지</span>
+              <span>1997.11.10</span>
+              <span>address: 경기도 이천</span>
+              <span>mail: whalswl576@gmail.com </span>
+              <span>학력: 남서울대학교 컴퓨터소프트웨어학과 졸업</span>
             </div>
-          </div>
-          <div className='skill-etc'>
-            <div>etc..</div>
+            <div className='certificate'>
+              <h1>certificate</h1>
+              <span>정보처리기사</span>
+              <span>MOS MASTER</span>
+            </div>
+            <div className='skill'>
+              <h1>skill</h1>
+              <div className='skill-front'>
+                <div>Front-End</div>
+                <div>
+                  { skillFront.map( lists => <SkillComponent listData={lists}/>) }
+                </div>
+              </div>
+              <div className='skill-back'>
+                <div>Back-End</div>
+                <div>
+                  { skillBack.map( lists => <SkillComponent listData={lists}/>)}
+                </div>
+              </div>
+              <div className='skill-etc'>
+                <div>etc..</div>
+                <div>
+                  { skillEtc.map( lists => <SkillComponent listData={lists}/>)}
+                </div> 
+              </div>
+            </div>
+          </section>
+        </Section>
+        <Section>          
+          <section id='project' ref={projectRef}>
+            <h1>PROJECT</h1>
             <div>
-              { skillEtc.map( lists => <SkillComponent listData={lists}/>)}
-            </div> 
-          </div>
-        </div>
-      </section>
+              <div className='project-nav'>
+                <button onClick={projectNavClick}>All</button>
+                <button onClick={projectNavClick}>Vue</button>
+                <button onClick={projectNavClick}>React</button>
+                <button onClick={projectNavClick}>JavaScript</button>
+              </div>
+              <div className='project-content'>
+              {  projectLists.map( lists => <PjComponent listData= {lists}  />) }
+              </div>
+            </div>
+          </section>
+        </Section>
 
-
-      <section id='project' ref={projectRef}>
-        <h1>PROJECT</h1>
-        <div>
-          <div className='project-nav'>
-            <button onClick={projectNavClick}>All</button>
-            <button onClick={projectNavClick}>Vue</button>
-            <button onClick={projectNavClick}>React</button>
-            <button onClick={projectNavClick}>JavaScript</button>
-          </div>
-          <div className='project-content'>
-           {  projectLists.map( lists => <PjComponent listData= {lists}  />) }
-          </div>
-        </div>
-      </section>
-      <Outlet />
+       
+          <Outlet />
+        
+        
+      </ SectionsContainer>
     </div>
   );
 }

@@ -13,7 +13,7 @@ $main-color :rgb(56, 54, 58);
 
 @mixin pageSize{
     // width: 100vw;
-    // height: 100vh;
+    height: 100vh;
 }
 
 @mixin flex-col{

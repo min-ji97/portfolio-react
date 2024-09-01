@@ -12,7 +12,6 @@ body {
   mix-blend-mode: difference;
   border-radius: 45px;
   border: 1px solid rgb(95, 94, 94);
-  z-index: 2;
   pointer-events: none;
   transform: translate(-50%, -50%);
   transition: transform 0.8s;

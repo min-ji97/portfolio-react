@@ -6,7 +6,18 @@ import { Outlet } from "react-router-dom";
 
 // import ReactFullpage from '@fullpage/react-fullpage';
 
-import {SectionsContainer, Section} from 'react-fullpage';
+// import {SectionsContainer, Section} from 'react-fullpage';
+
+
+
+import './css/footer.css';
+
+
+// import { FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+// import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faBlog } from "@fortawesome/free-solid-svg-icons";
+
+
 
 
 import './css/main.css';
@@ -98,20 +109,6 @@ const projectNavClick = (e) =>{
     });
 
   }else{ // All
-
-    // dataTypeVue.forEach( v =>{
-    //   v.style.display = 'block';
-    //   v.classList.add('project--click--content--effect');
-    // });
-    // dataTypeReact.forEach( v =>{
-    //   v.style.display = 'block';
-    //   v.classList.add('project--click--content--effect');
-    // });
-    // dataTypeJs.forEach( v =>{
-    //   v.style.display = 'block';
-    //   v.classList.add('project--click--content--effect');
-    // });
-
     dataAll.forEach( v =>{
       v.style.display = 'block';
       v.classList.add('project--click--content--effect');
@@ -119,9 +116,6 @@ const projectNavClick = (e) =>{
       v.style.animationDelay= `${countDelay}s`;
       countDelay += 0.1;
     });
-
-  
-
   }
 
 
@@ -277,7 +271,8 @@ const Main = ( {setIsHovering} ) => {
   const mainHeaderRef = useRef(null);
   const introduceRef = useRef(null);
   const projectRef = useRef(null);
-  
+  const contactRef = useRef(null);
+
   const location = useLocation();
 
 
@@ -330,6 +325,8 @@ const Main = ( {setIsHovering} ) => {
       introduceRef.current.scrollIntoView({ behavior : 'smooth' });
     }else if(location.hash === '#project'){
       projectRef.current.scrollIntoView({ behavior : 'smooth' });
+    }else if(location.hash === '#contact'){
+      contactRef.current.scrollIntoView({ behavior : 'smooth' });
     }
   },[location]);
 
@@ -367,28 +364,26 @@ const Main = ( {setIsHovering} ) => {
     { img : 'noorida/thumbnail.png', pjName: '졸업작품 : 누리다' , dataType: 'project-content--vue', className: 'project-content--vue', path: "/project/noorida"},
   ]
 
-  let options ={
-    anchors: ['sectionOne', 'sectionTwo', 'sectionThree'],
+  // let options ={
+  //   anchors: ['sectionOne', 'sectionTwo', 'sectionThree'],
 
-    activeClass:          'active', // the class that is appended to the sections links
-    arrowNavigation:      true, // use arrow keys
-    className:            'SectionContainer', // the class name for the section container
-    delay:                1000, // the scroll animation speed
-    navigation:           true, // use dots navigatio
-    scrollBar:            false, // use the browser default scrollbar
-    sectionClassName:     'Section', // the section class name
-    sectionPaddingTop:    '0', // the section top padding
-    sectionPaddingBottom: '0', // the section bottom padding
-    verticalAlign:        false,// align the content of each section vertical
-    scrollHorizontally: true
-  };
+  //   activeClass:          'active', // the class that is appended to the sections links
+  //   arrowNavigation:      true, // use arrow keys
+  //   className:            'SectionContainer', // the class name for the section container
+  //   delay:                1000, // the scroll animation speed
+  //   navigation:           true, // use dots navigatio
+  //   scrollBar:            false, // use the browser default scrollbar
+  //   sectionClassName:     'Section', // the section class name
+  //   sectionPaddingTop:    '0', // the section top padding
+  //   sectionPaddingBottom: '0', // the section bottom padding
+  //   verticalAlign:        false,// align the content of each section vertical
+  //   scrollHorizontally: true
+  // };
 
   return (
     
     <div id='main-container' ref={mainHeaderRef}>
-      <SectionsContainer {...options}>
-
-        <Section>
+      {/* <SectionsContainer {...options}> <Section  > */}
           <section id="home">
             {/* <canvas>
               
@@ -398,10 +393,10 @@ const Main = ( {setIsHovering} ) => {
               <div>portfolio</div>
             </div>
           </section>
-        </Section>
+        {/* </Section> */}
 
-        <Section>
-          <section id='introduce' ref={introduceRef}>
+        {/* <Section style="height: auto; max-height: none;"> */}
+          <section id='introduce' ref={introduceRef} >
             <div className='about-me'>
               <h1>about me</h1>
               <span>조민지</span>
@@ -437,9 +432,10 @@ const Main = ( {setIsHovering} ) => {
               </div>
             </div>
           </section>
-        </Section>
-        <Section>          
-          <section id='project' ref={projectRef}>
+        {/* </Section>
+        <Section 
+        style="height: auto; max-height: auto;">           */}
+          <section id='project' ref={projectRef} >
             <h1>PROJECT</h1>
             <div>
               <div className='project-nav'>
@@ -453,13 +449,33 @@ const Main = ( {setIsHovering} ) => {
               </div>
             </div>
           </section>
-        </Section>
+        {/* </Section>
+      </ SectionsContainer> */}
 
-       
-          <Outlet />
-        
-        
-      </ SectionsContainer>
+          <section id='contact' ref={contactRef} >
+            <h1>CONTACT</h1>
+            
+              <div className='contact--list'>
+                
+                  <div className='contact--git'>
+                      <a href="https://github.com/min-ji97" target="_blank">
+                          <FontAwesomeIcon className="icon" icon={faGithub} />
+                      </a>
+                  </div>
+
+                  <div className='contact--blog'>
+                      <a href="https://min-coding.tistory.com/" target='_blank'>
+                          <FontAwesomeIcon className="icon" icon={faBlog} />
+                      </a>
+                  </div>
+
+              </div>
+
+
+          </section>
+
+
+      <Outlet />
     </div>
   );
 }

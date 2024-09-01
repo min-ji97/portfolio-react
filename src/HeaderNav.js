@@ -85,7 +85,7 @@ function HeaderNav({setIsHovering, isRoutePage}) {
             </RouterLink>
           </div>
           <div> 
-            <RouterLink to="/Footer#footer">
+            <RouterLink to="/Main#contact">
               {/* contact */}
               <FontAwesomeIcon className="icon" icon={faAddressBook} />
             </RouterLink>

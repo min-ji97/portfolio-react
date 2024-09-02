@@ -188,8 +188,46 @@ body {
 }
 #contact .contact--list {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
+#contact .contact--list .contact--flip {
+  width: 300px;
+  height: 300px;
+  perspective: 1100px;
+  padding: 30px;
+  margin-left: 20px;
+}
+#contact .contact--list .contact--flip .contact--card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: 0.4s;
+  transform-style: preserve-3d;
+}
+#contact .contact--list .contact--flip .contact--card .card--front, #contact .contact--list .contact--flip .contact--card .card--back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#contact .contact--list .contact--flip .contact--card .card--front {
+  background-color: rgb(255, 246, 246);
+  border-radius: 4px;
+  border: 1px solid red;
+}
+#contact .contact--list .contact--flip .contact--card .card--back {
+  transform: rotateY(180deg);
+  background-color: rgb(211, 252, 255);
+  border-radius: 4px;
+  border: 1px solid rgb(64, 83, 255);
+}
+#contact .contact--list .contact--flip .contact--card .card--back a {
+  font-size: 30px;
+  color: black;
+}
+#contact .contact--list .contact--flip:hover .contact--card {
+  transform: rotateY(180deg);
+}
+
 /***************** project hover event!!! ************************/
 #project--component--container {
   display: inline-block;

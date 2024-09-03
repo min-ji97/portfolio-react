@@ -464,10 +464,10 @@ const Main = ( {setIsHovering} ) => {
                     깃허브
                     </div>
                     <div className='card--back contact--git'>
-                      바로가기!
-                        <a href="https://github.com/min-ji97" target="_blank">
+                      뒷면 왜 안돼
+                        {/* <a href="https://github.com/min-ji97" target="_blank">
                             <FontAwesomeIcon className="icon" icon={faGithub} />
-                        </a>
+                        </a> */}
                     </div>
                   </div>
                 </div>
@@ -479,10 +479,10 @@ const Main = ( {setIsHovering} ) => {
                         블로그
                       </div>
                       <div className='card--back contact--blog'>
-                        바로가기~~~~
-                        <a href="https://min-coding.tistory.com/" target='_blank'>
+                        뒷면인데 왜 안보이냔말이야..
+                        {/* <a href="https://min-coding.tistory.com/" target='_blank'>
                           <FontAwesomeIcon className="icon" icon={faBlog} />
-                        </a>
+                        </a> */}
                       </div>
 
                     </div>

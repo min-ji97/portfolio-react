@@ -202,28 +202,25 @@ body {
   height: 100%;
   position: relative;
   transform-style: preserve-3d;
-  transition: 0.4s;
-  transform: rotateY(0deg);
+  transition: all 1s;
 }
 #contact .contact--list .contact--flip .contact--card .card--front,
 #contact .contact--list .contact--flip .contact--card .card--back {
   position: absolute;
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  height: 100%;
   border-radius: 4px;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
 }
 #contact .contact--list .contact--flip .contact--card .card--front {
   background-color: rgb(255, 246, 246);
   border: 1px solid red;
-  transform: rotateY(0deg);
+  z-index: 2;
 }
 #contact .contact--list .contact--flip .contact--card .card--back {
   transform: rotateY(180deg);
   background-color: rgb(211, 252, 255);
   border: 1px solid rgb(64, 83, 255);
-  z-index: 200;
+  z-index: 1;
 }
 #contact .contact--list .contact--flip:hover .contact--card {
   transform: rotateY(180deg);

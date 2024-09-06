@@ -461,13 +461,14 @@ const Main = ( {setIsHovering} ) => {
                   <div className='contact--card'>
                         
                     <div className=' card--front'>
-                    깃허브
+                      GITHUB
                     </div>
                     <div className=' card--back contact--git'>
-                      깃허브_BACK
-                        {/* <a href="https://github.com/min-ji97" target="_blank">
+                      
+                        <a href="https://github.com/min-ji97" target="_blank">
                             <FontAwesomeIcon className="icon" icon={faGithub} />
-                        </a> */}
+                            <p>바로가기</p>
+                        </a>
                     </div>
                   </div>
                 </div>
@@ -476,13 +477,13 @@ const Main = ( {setIsHovering} ) => {
                   <div className='contact--flip'>
                     <div className='contact--card'>
                       <div className=' card--front'>
-                        블로그
+                        B-LOG
                       </div>
                       <div className=' card--back contact--blog'>
-                        블로그_BACK
-                        {/* <a href="https://min-coding.tistory.com/" target='_blank'>
+                        <a href="https://min-coding.tistory.com/" target='_blank'>
                           <FontAwesomeIcon className="icon" icon={faBlog} />
-                        </a> */}
+                          <p>바로가기</p>
+                        </a>
                       </div>
 
                     </div>

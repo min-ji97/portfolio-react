@@ -460,10 +460,10 @@ const Main = ( {setIsHovering} ) => {
                 <div className='contact--flip'>
                   <div className='contact--card'>
                         
-                    <div className=' card--front'>
+                    <div className='card--front'>
                       GITHUB
                     </div>
-                    <div className=' card--back contact--git'>
+                    <div className='card--back contact--git'>
                       
                         <a href="https://github.com/min-ji97" target="_blank">
                             <FontAwesomeIcon className="icon" icon={faGithub} />
@@ -473,21 +473,31 @@ const Main = ( {setIsHovering} ) => {
                   </div>
                 </div>
                   
-                
-                  <div className='contact--flip'>
-                    <div className='contact--card'>
-                      <div className=' card--front'>
-                        B-LOG
-                      </div>
-                      <div className=' card--back contact--blog'>
-                        <a href="https://min-coding.tistory.com/" target='_blank'>
-                          <FontAwesomeIcon className="icon" icon={faBlog} />
-                          <p>바로가기</p>
-                        </a>
-                      </div>
-
+                <div className='contact--flip'>
+                  <div className='contact--card'>
+                    <div className='card--front'>
+                      B-LOG
+                    </div>
+                    <div className='card--back contact--blog'>
+                      <a href="https://min-coding.tistory.com/" target='_blank'>
+                        <FontAwesomeIcon className="icon" icon={faBlog} />
+                        <p>바로가기</p>
+                      </a>
                     </div>
                   </div>
+                </div>
+
+
+                <div className='contact--flip'>
+                  <div className='contact--card'>
+                    <div className='card--front contact--email'>
+                      whalswl576@gmail.com
+                    </div>
+                    <div className='card--back contact--email'>
+                      whalswl576@gmail.com
+                    </div>
+                  </div>
+                </div>
 
               </div>
 

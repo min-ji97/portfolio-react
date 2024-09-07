@@ -137,12 +137,15 @@
       transform: perspective(1000px) ;
       transition: all 0.1s;
 
+      padding: 10px 5px;
 
       .project-content--link{
         width: 400px;
         height: 300px;
-        border: 1px solid black;
-        background-color: $main-color;
+        // border: 1px solid rgba(0, 0, 0, 0.5);
+        // background-color: $main-color;
+        // 아래 임시 배경색!
+        background-color: whitesmoke;
         margin: 5px 10px;
         border-radius: 10px;
         display: flex;
@@ -150,6 +153,8 @@
         text-decoration: none;
 
         overflow: visible;
+
+        box-shadow:0px 1px 3px 1px rgba(0, 0, 0, 0.5);
 
         img{
           width: 90%;
@@ -166,19 +171,19 @@
           padding: 0px 20px;
           text-align: center;
           line-height: 84px;
-          color: white;
+          
+          // color: white;
+          //아래 임시 text color
+          color: black;
          
         }
       }
-      .project-content--link{
-        // transform-origin: center center;
-        // overflow: visible;
-        // -ms-overflow-style: none; /* 인터넷 익스플로러 */
-        // scrollbar-width: none; /* 파이어폭스 */
-      }
+      // .project-content--link:hover{
+        
+      // }
       .project-content--link:hover{
-        
-        
+        border: none;
+        box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.5);
         transition: transform 0.3s;
       }
       // .project-content--link:hover::-webkit-scrollbar {
@@ -211,12 +216,13 @@
 #contact{
   @include h1-horizontal;
   
-  height: 800px;
+  height: 500px;
 
   padding-left: 30px;
 
 .contact--list{
   @include flex-row;
+  justify-content: center;
   // margin: ;
 
   // height: 1000px;
@@ -227,7 +233,8 @@
     height: 300px;
     //  위에 원래는300PX 
     perspective: 1200px;
-
+-webkit-backface-visibility: hidden;
+        backface-visibility: hidden; 
     padding: 30px;
     // justify-content: center;
     margin-left: 20px;
@@ -245,8 +252,9 @@
       transform-style: preserve-3d;
       transition: all 1s;
 
-      // transform: rotateY(180deg);
-
+      // transform: rotateY(180deg);    
+      border-radius: 10px;
+      box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
 
       .card--front, 
       .card--back {
@@ -255,25 +263,29 @@
         position: absolute;
         width: 100%; 
         height: 100%;
-        border-radius: 4px;
+        border-radius: 5px;
       }
   
       .card--front{
         background-color: rgb(255, 246, 246);
         // border: 1px solid rgb(194, 188, 188);
         // box-shadow: 60px -16px teal;
-        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+       
         z-index: 2;
         // 디자인
         font-size: 30px;
         font-weight: bold;
-        padding: 30px;
+        // padding: 30px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
       .card--back{
         transform: rotateY(180deg);
         background-color: rgb(211, 252, 255);
-        border: 1px solid rgb(64, 83, 255);
-        z-index: 1;
+        // border: 1px solid rgb(64, 83, 255);
+        // z-index: 1;
         a{
           font-size: 80px;
           color: black;
@@ -291,17 +303,28 @@
             font-size: 20px;
           }
         }
-        .icon:hover {
-          color: white;
+        a:hover p{
+          color: rgb(255, 91, 91);
         }
       }
 
+
+      .contact--email{
+        font-size: 20px;
+        font-weight: bold;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+      }
 
 
     }
     
     
   }
+
   .contact--flip:hover .contact--card {
     transform: rotateY(180deg);
     // -webkit-backface-visibility: hidden;
@@ -344,6 +367,7 @@
 #project--component--container{
 
   display: inline-block;
+  
 }
 
 .project--click--content--effect{
@@ -357,6 +381,7 @@
   animation-name: cardhover;
   animation-duration: 0.5s;
   perspective: 300px;
+  
   // animation-timing-function: ?;
  
 }
@@ -365,7 +390,7 @@
   0%{
     
   }
-  
+   
   50%{
     transform:  rotateY(-90deg);
     

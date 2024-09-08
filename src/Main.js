@@ -233,7 +233,10 @@ const PjComponent = ({listData}) =>{
     <div id='project--component--container'>
       <div className={listData.className} data-type={listData.dataType}> 
         <Link to={listData.path} className='project-content--link'>
-          <img src={ process.env.PUBLIC_URL + '/images/'+`${listData.img}`  }alt="" />
+          <div className='project--imgBox'>
+            <img src={ process.env.PUBLIC_URL + '/images/'+`${listData.img}`  }alt="" />
+          </div>
+          
           <span>{listData.pjName}</span>
         </Link>
       </div>
@@ -280,7 +283,7 @@ const Main = ( {setIsHovering} ) => {
   useEffect(()=>{
 
     const spanTag = document.querySelectorAll('#introduce span');
-    const pjBtn = document.querySelectorAll('#project .project-nav button , #project .project-content img');
+    const pjBtn = document.querySelectorAll('#project .project-nav button , #project .project-content img , .contact--git a , .contact--blog a');
 
     // span 태그에 닿으면 커서 크기 증가
     spanTag.forEach((item)=>{
@@ -408,7 +411,7 @@ const Main = ( {setIsHovering} ) => {
             <div className='certificate'>
               <h1>certificate</h1>
               <span>정보처리기사</span>
-              <span>MOS MASTER</span>
+              <span>MOS MASTER : Word(Expert) , Excel(Expert),  Powerpoint(Core) + Access(Core)</span>
             </div>
             <div className='skill'>
               <h1>skill</h1>

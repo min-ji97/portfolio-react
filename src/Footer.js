@@ -20,7 +20,7 @@ const Footer = () =>{
     },[location])
     return (
         <footer ref={footerRef}>
-            <div className='footer-nav'>
+            {/* <div className='footer-nav'>
                 <div className='git'>
                     <a href="https://github.com/min-ji97" target="_blank">
                         <FontAwesomeIcon className="icon" icon={faGithub} />
@@ -31,7 +31,7 @@ const Footer = () =>{
                         <FontAwesomeIcon className="icon" icon={faBlog} />
                     </a>
                 </div>
-            </div>
+            </div> */}
             <div className='footer-rights'>
                 <span>2024 joeMinJi - All rights reserved</span>
             </div>

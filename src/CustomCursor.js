@@ -21,7 +21,15 @@ const NewCursor = styled.div`
   transform: translate(-50%, -50%);
   transition: transform 0.2s;
 
-  transform: ${({ isHovering }) => (isHovering ? "scale(5)" : "scale(1)")};
+  transform: ${({ isHovering }) => 
+    (isHovering === 'spanHover' ) 
+      ? "scale(5)" 
+      : (isHovering === 'btnHover')
+      ? "scale(3)" 
+      : "scale(1)"
+  };
+
+
   background-color:  ${({ isHovering }) => (isHovering ? "rgb(233, 233, 233)" : "rgba(194, 193, 194, 0.219)")};
   border-color: ${({ isHovering }) => (isHovering ? 'rgb(196, 0, 0)':'rgb(255, 245, 245)' )} ;
   
@@ -30,7 +38,7 @@ const NewCursor = styled.div`
   
 
  &::before {
-    content: "Click!";
+    content: "Click";
     position: absolute;
     top: 0;
     left: 0;
@@ -44,7 +52,7 @@ const NewCursor = styled.div`
     line-height: 16px;
     
     opacity: ${ ({isHovering}) => (isHovering === 'btnHover' ? 1 : 0 ) };
-    
+    /* transform: scale(2); */
     transition: opacity 0.3s ease-in-out;
   }
 

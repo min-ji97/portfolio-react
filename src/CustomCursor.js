@@ -13,9 +13,12 @@ const NewCursor = styled.div`
   top: 0;
   width: 20px;
   height: 20px;
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
+
+  mix-blend-mode: ${ ({isHovering}) =>
+    (isHovering === 'btnHover') ? "none" : "difference" };
   border-radius: 45px;
-  border: 1px solid rgb(255, 245, 245);
+  border: 1px solid white;
   z-index: 2;
   pointer-events: none;
   transform: translate(-50%, -50%);
@@ -30,9 +33,25 @@ const NewCursor = styled.div`
   };
 
 
-  background-color:  ${({ isHovering }) => (isHovering ? "rgb(233, 233, 233)" : "rgba(194, 193, 194, 0.219)")};
-  border-color: ${({ isHovering }) => (isHovering ? 'rgb(196, 0, 0)':'rgb(255, 245, 245)' )} ;
+  /* background-color:  ${({ isHovering }) => (isHovering ? "rgb(233, 233, 233)" : "rgba(194, 193, 194, 0.219)")}; */
+  /* border-color: ${({ isHovering }) => (isHovering ? 'rgb(196, 0, 0)':'rgb(255, 245, 245)' )} ; */
+
+  background-color: ${ ({ isHovering }) => 
+    (isHovering === 'spanHover') ? "rgb(233, 233, 233)" 
+      :(isHovering === 'btnHover') ? "white" 
+      : "rgba(194, 193, 194, 0.219)"
   
+  };
+
+  border-color: ${ ({ isHovering }) => 
+    (isHovering === 'spanHover') ? "rgb(196, 0, 0)" 
+      :(isHovering === 'btnHover') ? "black" 
+      : "rgb(255, 245, 245)"
+  
+  };
+
+
+
   opacity: ${ ({isHovering}) => (isHovering === 'navHover' ? 0 : 1 ) };
   transition: transform 0.3s ease; 
   
@@ -44,11 +63,12 @@ const NewCursor = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: white;
-    color: blue;
-    font-size: 6px;
+    /* background-color: black; */
+    
+    color: black;
+    font-size: 7px;
     font-weight: bold;
-    padding-left: 2px;
+    padding-left: 1px;
     line-height: 16px;
     
     opacity: ${ ({isHovering}) => (isHovering === 'btnHover' ? 1 : 0 ) };

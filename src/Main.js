@@ -411,7 +411,7 @@ const Main = ( {setIsHovering} ) => {
             <div className='certificate'>
               <h1>certificate</h1>
               <span>정보처리기사</span>
-              <span>MOS MASTER : Word(Expert) , Excel(Expert),  Powerpoint(Core) + Access(Core)</span>
+              <span>MOS MASTER : Word, Excel, Powerpoint + Access</span>
             </div>
             <div className='skill'>
               <h1>skill</h1>

@@ -145,7 +145,7 @@
         // border: 1px solid rgba(0, 0, 0, 0.5);
         // background-color: $main-color;
         // 아래 임시 배경색!
-        background-color: whitesmoke;
+        background-color: $project-card-color;
         margin: 5px 10px;
         border-radius: 10px;
         display: flex;
@@ -245,7 +245,7 @@
     
     width: 300px;
     height: 300px;
-    //  위에 원래는300PX 
+    //  위에 원래는300PX  
     perspective: 1200px;
 -webkit-backface-visibility: hidden;
         backface-visibility: hidden; 
@@ -283,7 +283,7 @@
       .card--front{
         // background-color: rgb(255, 246, 246);
     
-        background: linear-gradient(-45deg, #f3f5f0 50%, #dfe8eb 50%);
+        background: $contact-card-background-color;
         z-index: 2;
         // 디자인
         font-size: 30px;
@@ -297,7 +297,7 @@
       .card--back{
         transform: rotateY(180deg);
         // background-color: rgb(211, 252, 255);
-        background: linear-gradient(45deg, #f3f5f0 50%, #dfe8eb 50%);
+        background: $contact-card-background-color;
   
         a{
           font-size: 80px;
@@ -319,7 +319,7 @@
           }
         }
         a:hover p{
-          color: rgb(214, 76, 66);
+          color: rgb(106, 106, 122);
         }
       }
 

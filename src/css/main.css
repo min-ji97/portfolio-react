@@ -16,7 +16,6 @@ body {
   transform: translate(-50%, -50%);
   transition: transform 0.8s;
   z-index: 9999;
-  color: rgb(196, 0, 0);
 }
 
 #main-container {
@@ -232,7 +231,7 @@ body {
   border-radius: 5px;
 }
 #contact .contact--list .contact--flip .contact--card .card--front {
-  background: linear-gradient(-45deg, #f3f5f0 50%, #dfe8eb 50%);
+  background: linear-gradient(45deg, #f3f5f0 50%, rgb(227, 227, 245) 50%);
   z-index: 2;
   font-size: 30px;
   font-weight: bold;
@@ -242,7 +241,7 @@ body {
 }
 #contact .contact--list .contact--flip .contact--card .card--back {
   transform: rotateY(180deg);
-  background: linear-gradient(45deg, #f3f5f0 50%, #dfe8eb 50%);
+  background: linear-gradient(45deg, #f3f5f0 50%, rgb(227, 227, 245) 50%);
 }
 #contact .contact--list .contact--flip .contact--card .card--back a {
   font-size: 80px;
@@ -262,7 +261,7 @@ body {
   font-weight: bold;
 }
 #contact .contact--list .contact--flip .contact--card .card--back a:hover p {
-  color: rgb(214, 76, 66);
+  color: rgb(106, 106, 122);
 }
 #contact .contact--list .contact--flip .contact--card .contact--email {
   font-size: 20px;

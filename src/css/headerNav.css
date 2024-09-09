@@ -5,7 +5,8 @@
   top: 0;
   left: 0;
   position: fixed;
-  background-color: rgb(56, 54, 58);
+  background-color: rgb(192, 192, 213);
+  box-shadow: 1px 1px 1px 1px rgba(177, 161, 161, 0.5019607843);
   border-right: 3px solid rgb(255, 255, 255);
 }
 #header-container .header-nav {

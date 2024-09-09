@@ -2,13 +2,23 @@
 // 변수 
 
 // $main-color : rgb(11, 0, 19);
-$main-color :rgb(56, 54, 58);
 
+// 바꾸기 전
+// $main-color :rgb(56, 54, 58);
+// $main-box-shadow :  1px 1px 1px 1px #b1a1a180;
 
-//     background-color: rgb(192 192 213);
+// 바꾼 후
+$main-color : rgb(192 192 213);
+$main-box-shadow :  1px 1px 1px 1px #b1a1a180;
+
+//background-color: rgb(192 192 213);
 // 색 이쁜데 이런느낌으로 main-color 바꿀까..! 고민!
 //box-shadow: 1px 1px 1px 1px #b1a1a180;
 
+
+$project-card-color: whitesmoke;
+// $contact-card-background-color: linear-gradient(45deg, #f3f5f0 50%, #dfe8eb 50%);
+$contact-card-background-color: linear-gradient(45deg, #f3f5f0 50%, rgb(227, 227, 245) 50%);
 
 
 // mixin

@@ -17,21 +17,37 @@
   // width: 100vw;
   //  첫번째 페이지 header - minji's portpolio!
 
-  #home{
+  #home{  
     @include pageSize;
   
     // background-color: black;
     display: flex;
-    padding: 0px 0px 50px 30px;
+    //원래 padding값 padding: 0px 0px 50px 30px;
+    padding: 120px 0px 150px 30px;  
+    // text-shadow: 0 1px 0 #777, 0 -1px 0 #000;
+    width: 100%;
+    justify-content: space-around;
+    background-color: rgb(230, 230, 230);
+    
     .home--title{
       font-size: 100px;
-      color: rgb(240, 156, 156);
+      // color: rgb(240, 156, 156);
+      color: rgb(192 192 213);
       font-weight: bold;
+      text-shadow: 0 1px 0 #777, 0 -1px 0 #000;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+    }
 
+    .home--intro{
       display: flex;
       flex-direction: column;
       justify-content: end;
-    }
+      text-align: center;
+      font-size: 25px;
+      padding-bottom: 101px;
+      }
   
   }
  

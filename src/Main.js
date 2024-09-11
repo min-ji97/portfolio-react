@@ -11,7 +11,7 @@ import { Outlet } from "react-router-dom";
 
 
 import './css/footer.css';
-
+import mainEvent from './mainEvent.js';
 
 // import { FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 // import { faGithub } from "@fortawesome/free-brands-svg-icons";
@@ -388,19 +388,19 @@ const Main = ( {setIsHovering} ) => {
     <div id='main-container' ref={mainHeaderRef}>
       {/* <SectionsContainer {...options}> <Section  > */}
           <section id="home">
-            {/* <canvas>
+            <canvas className='home--canvas'>
               
-            </canvas> */}
+            </canvas>
             <div className="home--title">
-              <div>Minji's</div>
+              <div>MINJI's</div>
               <div>Portfolio</div>
             </div>
             <div className='home--intro'>
-              {/* <h1>안녕하세요</h1>
+              <h1>안녕하세요</h1>
               <h1>프론트엔드 신입 개발자를 꿈꾸는 조민지 입니다.</h1>
               <span>신입 개발자로서 고객들이 쉽게 사용할 수 있는 아름답고 </span>
               <span>기능적인 웹 애플리케이션을 만드는 데 기여하고 싶습니다.</span>
-              <span>끊임없이 배우고 성장해 나가는 개발자가 되도록 하겠습니다.</span> */}
+              <span>끊임없이 배우고 성장해 나가는 개발자가 되도록 하겠습니다.</span>
             </div>
           </section>
         {/* </Section> */}

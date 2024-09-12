@@ -3,18 +3,24 @@ import { gsap } from "gsap";
 
 const mainEvent = () =>{
 
-    let homeTitleDiv = document.querySelector('.home--title div:first-child , .home--title div:last-child');
+    let homeTitleDiv = document.querySelectorAll('.home--title div:first-child , .home--title div:last-child , .home--intro h1:first-child, .home--intro h1:last-child');
+
+    let dd = document.querySelectorAll('.home--title div:first-child');
 
     console.log('?????');
     console.log('??',homeTitleDiv);
     // gsap.to(요소, 지속시간, 옵션);
+    
     homeTitleDiv.forEach(( item , index )=>{
         gsap.to(item, 1 ,{
             delay: (index + 1) * 0.7,
             opacity: 1
         });
     });
-
+    gsap.to('.home--title', 1 ,{
+        delay: 2,
+        opacity: 1
+    });
 
 
     // let canvas = document.querySelector('.home--canvas');

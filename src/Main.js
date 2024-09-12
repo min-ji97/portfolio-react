@@ -278,7 +278,9 @@ const Main = ( {setIsHovering} ) => {
 
   const location = useLocation();
 
-
+  useEffect(()=>{
+    mainEvent();
+  },[])
 
   useEffect(()=>{
 

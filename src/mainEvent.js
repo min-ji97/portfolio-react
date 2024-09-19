@@ -24,9 +24,11 @@ const mainEvent = () =>{
             delay: (index + 1) * 0.7,
             opacity: 1
         });
+
     });
 
-
+    // setTimeout( typeWriter , 3500);
+    setTimeout(typeWriter, 4500);
     /**
      * 
      * 
@@ -40,9 +42,15 @@ const mainEvent = () =>{
     // 타이핑
     const homeIntroTag = document.querySelector(".home--intro > div");
 
-    const introSpan1 = "신입 개발자로서 고객들이 쉽게 사용할 수 있는 아름답고"; // 타이핑할 문구
-    const introSpan2 = "기능적인 웹 애플리케이션을 만드는 데 기여하고 싶습니다.";
-    const introSpan3 = "끊임없이 배우고 성장해 나가는 개발자가 되도록 하겠습니다.";
+    // const intro1 =  document.querySelector(".home--intro span:nth-of-type(1)");
+    // const intro2 =  document.querySelector(".home--intro span:nth-of-type(2)");
+    // const intro3 =  document.querySelector(".home--intro span:nth-of-type(3)");
+    // console.log(intro1, intro2, intro3);
+
+
+    // const introSpan1 = "신입 개발자로서 고객들이 쉽게 사용할 수 있는 아름답고"; // 타이핑할 문구
+    // const introSpan2 = "기능적인 웹 애플리케이션을 만드는 데 기여하고 싶습니다.";
+    // const introSpan3 = "끊임없이 배우고 성장해 나가는 개발자가 되도록 하겠습니다.";
 
     const introSpanArray = [
         "신입 개발자로서 고객들이 쉽게 사용할 수 있는 아름답고",
@@ -52,17 +60,31 @@ const mainEvent = () =>{
 
     let textNum = 0;
     let speed = 100; // 글자 타이핑 속도 (밀리초 단위)
+    let currentLine = 0;
 
     function typeWriter() {
 
-        // introSpanArray.forEach( ( item , index ) =>{
-        //     if( textNum < item.length ){
-        //         homeIntroTag.textContent += item.charAt(textNum);
-        //         textNum++;
-        //         setTimeout(typeWriter, speed);
-        //     }
-        // })
+        if (currentLine < introSpanArray.length) {
+            let currentText = introSpanArray[currentLine]; // 현재 줄의 텍스트
+    
+            if (textNum < currentText.length) {
+                // 현재 줄에서 한 글자씩 타이핑
+                homeIntroTag.innerHTML += currentText.charAt(textNum);
+                textNum++;
+                setTimeout(typeWriter, speed);
+            } else {
+                // 한 줄 타이핑 완료 시 다음 줄로 이동
+                homeIntroTag.innerHTML += "<br>"; // 줄바꿈
+                currentLine++; // 다음 줄로 이동
+                textNum = 0; // 다음 줄의 첫 글자부터 시작
+                setTimeout(typeWriter, speed); // 다음 줄 타이핑 시작
+            }
+        }
+    }
 
+    function textTyping(item , i) {
+        homeIntroTag.textContent += item.charAt(i);
+    }
         // textNum = 0;
 
         // if (textNum < introSpanArray[i].length) {
@@ -73,9 +95,9 @@ const mainEvent = () =>{
 
 
 
-    }
+    
 
-    typeWriter();
+  
 
 
 

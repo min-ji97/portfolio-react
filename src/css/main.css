@@ -1,3 +1,7 @@
+.visible-none {
+  display: none;
+}
+
 body {
   cursor: none;
 }
@@ -49,6 +53,25 @@ body {
   font-size: 25px;
   padding-bottom: 101px;
   color: rgb(151, 134, 158);
+}
+#main-container #home .home--intro div {
+  min-height: 120px;
+}
+#main-container #home .home--intro div .intro--cursor {
+  background-color: rgb(151, 134, 158);
+  color: rgb(151, 134, 158);
+  animation: blink 0.8s infinite;
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 #main-container #home canvas {
   position: absolute;

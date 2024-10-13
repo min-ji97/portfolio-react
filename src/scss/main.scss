@@ -66,7 +66,35 @@
       font-size: 25px;
       padding-bottom: 101px;
       color: rgb(151, 134, 158);
+
+        div{
+          min-height: 120px; 
+
+          .intro--cursor{
+            // width: 10px;
+            // height: 20px;
+            background-color: rgb(151, 134, 158);
+            color:rgb(151, 134, 158);
+            animation: blink 0.8s infinite;
+            
+          }
+          @keyframes blink {
+            0%{
+              opacity: 1;
+            }
+            50%{
+              opacity: 0;
+            }
+            100%{
+              opacity: 1;
+            }
+            
+          }
+        }
+        
       }
+      
+    
       canvas{
         position: absolute;
         width: 100%;
@@ -74,24 +102,6 @@
         // background-color: red; 
       }
 
-      // span{
-      //   animation: 
-      //   typing 3.5s steps(40, end),
-      //   blink-caret .75s step-end infinite;
-      //   overflow: hidden;
-      // }
-
-      // /* The typing effect */
-      // @keyframes typing {
-      //   from { width: 0 }
-      //   to { width: 100% }
-      // }
-
-      // /* The typewriter cursor effect */
-      // @keyframes blink-caret {
-      //   from, to { border-color: transparent }
-      //   50% { border-color: orange; }
-      // }
   }
  
 

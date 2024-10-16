@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .visible-none {
   display: none;
 }
@@ -98,4 +99,53 @@
   z-index: 99;
   width: 50px !important;
   height: 120px !important;
+}
+
+/** 미디어 쿼리 **/
+@media (max-width: 1000px) {
+  #header-container {
+    width: 100%;
+    height: 85px;
+    top: auto;
+    bottom: 0;
+    position: fixed;
+    z-index: 100;
+    border-top: 3px solid rgb(255, 255, 255);
+    justify-content: center;
+  }
+  #header-container .header-nav {
+    flex-direction: row;
+  }
+  #header-container .header-nav div {
+    width: 80px;
+    height: 50px;
+    margin: 16px 5px;
+  }
+  #header-container .header-nav div a .icon {
+    font-size: 50px;
+  }
+  #header-container .header-nav div a:hover::before {
+    position: absolute;
+    content: "";
+    bottom: 60px;
+    left: 0;
+    width: 90%;
+    border: 2px solid white;
+    border-radius: 5px;
+    background-color: transparent;
+    padding: 5px 0px;
+    color: white;
+    z-index: 99;
+    text-align: center;
+    font-size: 12px;
+  }
+  #header-container .header-nav div a:hover::after {
+    content: "";
+    top: 50px;
+    left: 20px;
+    border: 5px solid transparent;
+    border-bottom: 5px solid white;
+    z-index: 99;
+    position: absolute;
+  }
 }

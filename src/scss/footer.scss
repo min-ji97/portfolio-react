@@ -50,3 +50,9 @@ footer{
         };
     }
 }
+
+@media (max-width: 1000px) {
+    footer{
+        margin-bottom: 80px;
+    }
+}

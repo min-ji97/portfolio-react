@@ -356,6 +356,9 @@ body {
   #main-container #home .home--intro {
     font-size: 20px;
   }
+  #main-container #contact .contact--list .contact--flip {
+    margin-left: 0px;
+  }
 }
 @media (max-width: 1000px) {
   #main-container {
@@ -374,6 +377,45 @@ body {
   #main-container #home .home--intro span {
     font-size: 20px;
   }
+  #main-container #project .project-nav {
+    text-align: center;
+  }
+  #main-container #project .project-content {
+    justify-content: center;
+  }
+}
+@media (max-width: 880px) {
+  #main-container #project .project-nav button {
+    margin: 30px 5px 0px 5px;
+    font-size: 22px;
+    width: 166px;
+    height: 53px;
+  }
+  #main-container #project .project-content .project-content--link {
+    width: auto;
+    height: auto;
+    margin: 22px 66px;
+  }
+  #main-container #project .project-content .project-content--link span {
+    font-size: 20px;
+  }
+  #main-container #contact .contact--list .contact--flip {
+    width: 250px;
+    height: 250px;
+    margin-left: 0px;
+    padding: 15px;
+    margin-bottom: 10px;
+  }
+  #main-container #contact .contact--list .contact--flip .contact--card {
+    width: 100%;
+    height: 100%;
+  }
+  #main-container #contact .contact--list .contact--flip .contact--card .card--front {
+    font-size: 28px;
+  }
+  #main-container #contact .contact--list .contact--flip .contact--card .contact--email {
+    font-size: 15px;
+  }
 }
 @media (max-width: 740px) {
   #main-container {
@@ -390,6 +432,46 @@ body {
   }
   #main-container #home .home--intro span {
     font-size: 20px;
+  }
+  #main-container #introduce h1 {
+    font-size: 50px;
+  }
+  #main-container #introduce .about-me span, #main-container #introduce .certificate span, #main-container #introduce .skill span {
+    font-size: 20px;
+  }
+  #main-container #introduce .skill-front div:nth-of-type(1),
+  #main-container #introduce .skill-back div:nth-of-type(1),
+  #main-container #introduce .skill-etc div:nth-of-type(1) {
+    font-size: 30px;
+  }
+  #main-container #introduce .skill-front div:nth-of-type(2) span,
+  #main-container #introduce .skill-back div:nth-of-type(2) span,
+  #main-container #introduce .skill-etc div:nth-of-type(2) span {
+    margin: 0 8px 8px 0px;
+    border-radius: 5px;
+  }
+  #main-container #project .project-nav button {
+    margin: 30px 5px 0px 5px;
+    font-size: 15px;
+    width: 95px;
+    height: 45px;
+  }
+  #main-container #project .project-content .project-content--link {
+    margin: 11px 10px;
+  }
+  #main-container #project .project-content .project-content--link span {
+    font-size: 18px;
+  }
+  #main-container #contact .contact--list .contact--flip {
+    width: 200px;
+    height: 200px;
+    padding: 9px;
+  }
+  #main-container #contact .contact--list .contact--flip .contact--card .card--front {
+    font-size: 22px;
+  }
+  #main-container #contact .contact--list .contact--flip .contact--card .contact--email {
+    font-size: 12px;
   }
 }
 @media (max-width: 450px) {
@@ -410,6 +492,54 @@ body {
     font-size: 23px;
   }
   #main-container #home .home--intro span {
+    font-size: 13px;
+  }
+  #main-container #introduce h1 {
+    font-size: 44px;
+  }
+  #main-container #introduce .about-me span, #main-container #introduce .certificate span, #main-container #introduce .skill span {
+    font-size: 14px;
+  }
+  #main-container #introduce .skill-front div:nth-of-type(1),
+  #main-container #introduce .skill-back div:nth-of-type(1),
+  #main-container #introduce .skill-etc div:nth-of-type(1) {
+    font-size: 28px;
+  }
+  #main-container #introduce .skill-front div:nth-of-type(2) svg,
+  #main-container #introduce .skill-back div:nth-of-type(2) svg,
+  #main-container #introduce .skill-etc div:nth-of-type(2) svg {
+    margin-right: 7px;
+  }
+  #main-container #project {
+    padding-left: 10px;
+  }
+  #main-container #project .project-nav button {
+    margin: 12px 3px 4px 0px;
+    font-size: 12px;
+    width: 79px;
+    height: 40px;
+  }
+  #main-container #project .project-content .project-content--link {
+    margin: 5px 10px;
+  }
+  #main-container #contact {
+    padding-left: 10px;
+    height: 534px;
+  }
+  #main-container #contact .contact--list {
+    flex-wrap: wrap;
+    margin: 15px 0px;
+  }
+  #main-container #contact .contact--list .contact--flip {
+    width: 180px;
+    height: 180px;
+    padding: 20px;
+    margin: 0px;
+  }
+  #main-container #contact .contact--list .contact--flip .contact--card .card--front {
     font-size: 19px;
+  }
+  #main-container #contact .contact--list .contact--flip .contact--card .contact--email {
+    font-size: 10px;
   }
 }

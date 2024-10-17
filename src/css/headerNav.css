@@ -110,7 +110,8 @@
     bottom: 0;
     position: fixed;
     z-index: 100;
-    border-top: 3px solid rgb(255, 255, 255);
+    border-top: 3px solid rgba(177, 161, 161, 0.5019607843);
+    border-right: 0px;
     justify-content: center;
   }
   #header-container .header-nav {

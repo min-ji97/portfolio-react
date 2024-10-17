@@ -133,10 +133,11 @@
         bottom: 0;
         position: fixed;
         z-index: 100;
-        border-top: 3px solid rgb(255, 255, 255);
+        border-top: 3px solid #b1a1a180;
+        border-right: 0px;
         justify-content: center;
        .header-nav {
-            flex-direction: row;
+            flex-direction: row;    
 
 
 

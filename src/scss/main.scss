@@ -119,8 +119,6 @@
     padding-left: 20px;
     
     span{
-      
-      
       // background-color: white;
     }
 
@@ -522,6 +520,15 @@
         font-size: 20px;
       }
     }
+
+    #contact{
+      .contact--list{
+        
+        .contact--flip{
+          margin-left: 0px;
+        }
+      }
+    }
   }
   
 }
@@ -547,8 +554,78 @@
         }
       }
     }
+
+    #project{
+
+      .project-nav{
+        text-align: center;
+      }
+
+      .project-content{
+        justify-content: center;
+      }
+    }
+
   }
 }
+
+// project의 content와 button의 사이즈를 줄이기 위한 미디어 쿼리
+
+@media (max-width: 880px){
+  #main-container {
+    #project{
+
+      .project-nav{
+        button{
+          margin: 30px 5px 0px 5px;
+          font-size: 22px;
+          width: 166px;
+          height: 53px;
+        }
+      }
+  
+      .project-content{
+      
+        .project-content--link{
+          width: auto;
+          height: auto;
+          margin: 22px 66px;
+  
+          span{
+            font-size: 20px;
+          }
+        }
+  
+      }
+    }
+
+    #contact{
+      .contact--list{
+        .contact--flip{
+          width: 250px;
+          height: 250px;
+          margin-left: 0px;
+          padding: 15px;
+          margin-bottom: 10px;
+          .contact--card{
+            width: 100%;
+            height: 100%;
+            .card--front{
+              font-size: 28px;
+            }
+            .contact--email{
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+
+
+  }
+}
+  
+
 
 @media (max-width: 740px) {
   #main-container{
@@ -573,11 +650,86 @@
         }
       }
     }
+
+    #introduce{
+
+      h1{
+        font-size: 50px;
+      }
+      
+      .about-me,.certificate,.skill{
+        span{
+          font-size: 20px;
+        }
+      }
+      .skill-front div:nth-of-type(1),
+      .skill-back div:nth-of-type(1),
+      .skill-etc div:nth-of-type(1){
+        font-size: 30px;
+      }
+      .skill-front div:nth-of-type(2),
+      .skill-back div:nth-of-type(2),
+      .skill-etc div:nth-of-type(2){
+        svg{
+          // margin-right: 10px;
+        }
+        span{
+          margin: 0 8px 8px 0px; 
+          border-radius: 5px;
+        }
+      }
+    }
+
+    #project{
+
+      .project-nav{
+        button{
+          margin: 30px 5px 0px 5px;
+          font-size: 15px;
+          width: 95px;
+          height: 45px;
+        }
+      }
+  
+      .project-content{
+      
+        .project-content--link{
+          // width: auto;
+          // height: auto;
+          margin: 11px 10px;
+  
+          span{
+            font-size: 18px;
+          }
+        }
+  
+      }
+    }
+
+    #contact{
+      .contact--list{
+        .contact--flip{
+          width: 200px;
+          height: 200px;
+          padding: 9px;
+
+          .contact--card{
+
+            .card--front{
+              font-size: 22px;
+            }
+            .contact--email{
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
 @media (max-width: 450px) {
-  
+    
   #main-container{
     margin-left: 0px;
     // footer height 값 찾아서 마진 주자!
@@ -595,9 +747,94 @@
           font-size: 23px;
         }
         span{
-          font-size: 19px;
+          font-size: 13px;
         }
         
+      }
+    }
+
+    #introduce{
+
+      h1{
+        font-size: 44px;
+      }
+      
+      .about-me,.certificate,.skill{
+        span{
+          font-size: 14px;
+        }
+      }
+      .skill-front div:nth-of-type(1),
+      .skill-back div:nth-of-type(1),
+      .skill-etc div:nth-of-type(1){
+        font-size: 28px;
+      }
+      .skill-front div:nth-of-type(2),
+      .skill-back div:nth-of-type(2),
+      .skill-etc div:nth-of-type(2){
+        svg{
+          margin-right: 7px;
+        }
+        span{
+          // margin: 0 8px 8px 0px; 
+          // border-radius: 5px;
+        }
+      }
+    }
+
+
+
+    #project{
+      padding-left: 10px;
+      .project-nav{
+        button{
+          margin: 12px 3px 4px 0px;
+          font-size: 12px;
+          width: 79px;
+          height: 40px;
+        }
+      }
+  
+      .project-content{
+      
+        .project-content--link{
+          // width: auto;
+          // height: auto;
+          margin: 5px 10px;
+  
+          span{
+            // font-size: 20px;
+          }
+        }
+  
+      }
+    }
+
+    #contact{
+      padding-left: 10px;
+      height: 534px;
+      .contact--list{
+        flex-wrap: wrap;  
+        // align-items: center;
+        margin: 15px 0px;
+        .contact--flip{
+          width: 180px;
+          height: 180px;
+          padding: 20px;
+          margin: 0px;
+          .contact--card{
+
+            .card--front{
+              font-size: 19px;
+            }
+            .contact--email{
+              font-size: 10px;
+            }
+          }
+        }
+        // .contact--flip:nth-of-type(3){
+        //   padding-bottom:40px;
+        // }
       }
     }
    

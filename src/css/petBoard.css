@@ -1,6 +1,7 @@
-#project-component {
-  margin: 0px 50px 0px 150px;
+.visible-none {
+  display: none;
 }
+
 #project-component h1 {
   margin: 30px;
 }
@@ -96,7 +97,6 @@
 }
 #project-component .pet--modify span {
   font-size: 25px;
-  color: black;
   font-weight: bold;
 }
 #project-component .pet--modify .pet--modify--item5 {

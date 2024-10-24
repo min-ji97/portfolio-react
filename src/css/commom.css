@@ -1,13 +1,18 @@
+.visible-none {
+  display: none;
+}
+
 #pj-component {
   margin-bottom: 50px;
 }
 #pj-component .pj-component--title {
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
+  border: 1px solid rgb(192, 192, 213);
+  box-shadow: 3px 2px 0px 0px rgb(192, 192, 213);
   border-radius: 10px;
   padding: 20px 50px;
-  margin: 50px 0px 20px 0px;
+  margin: 50px 3px 20px 0px;
 }
 #pj-component .pj-component--title h1 {
   margin: 10px 0px 13px 0px;
@@ -17,14 +22,20 @@
   font-size: 23px;
 }
 #pj-component .pj-component--skill div {
-  width: 40%;
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
-  padding: 20px 50px;
+  border-left: 8px solid rgb(192, 192, 213);
+  padding: 20px 15px;
   margin-bottom: 30px;
+  border-radius: 4px;
 }
 #pj-component .pj-component--skill span {
   font-size: 23px;
   font-weight: bold;
+}
+
+@media (max-width: 1000px) {
+  #project-component {
+    margin: 0px 50px 0px 50px;
+  }
 }

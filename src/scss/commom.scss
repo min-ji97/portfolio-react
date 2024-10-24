@@ -1,13 +1,19 @@
+@import "_variables";
+
+#project-component{
+    // margin: 0px 50px 0px 150px;
+}
 
 #pj-component{
     margin-bottom: 50px;
     .pj-component--title{
         display: flex;
         flex-direction: column;
-        border: 1px solid black;
+        border: 1px solid $main-color;
+        box-shadow: 3px 2px 0px 0px $main-color;
         border-radius: 10px;
         padding: 20px 50px;
-        margin: 50px 0px 20px 0px;
+        margin: 50px 3px 20px 0px;
         h1{
             margin: 10px 0px 13px 0px;
             font-size:40px ;
@@ -18,16 +24,48 @@
     }
     .pj-component--skill{
         div{
-            width: 40%;
+            // width: 40%;
             display: flex;
             flex-direction: column;
-            border: 1px solid black;
-            padding: 20px 50px;
+            border-left: 8px solid $main-color;
+            padding: 20px 15px;
             margin-bottom: 30px;
+            border-radius: 4px;
         }
         span{
             font-size: 23px;
             font-weight: bold;
         }
     }
+}
+
+@media (max-width : 1000px) {
+    #project-component{
+        margin: 0px 50px 0px 50px;
+    }
+
+    #pj-component{
+        // margin-bottom: 50px;
+        .pj-component--title{
+            // display: flex;
+            // flex-direction: column;
+            // border: 1px solid $main-color;
+            // box-shadow: 3px 2px 0px 0px $main-color;
+            // border-radius: 10px;
+            // padding: 20px 50px;
+            // margin: 50px 3px 20px 0px;
+            h1{
+                // margin: 10px 0px 13px 0px;
+                // font-size:40px ;
+            }
+            span{
+                // font-size: 23px;
+            }
+        }
+
+
+    }
+
+
+
 }

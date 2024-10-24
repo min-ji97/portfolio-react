@@ -464,7 +464,7 @@
   animation-duration: 0.5s;
   perspective: 300px;
   
-  // animation-timing-function: ?;
+  
  
 }
 
@@ -482,25 +482,6 @@
 
   }
 }
-
-
-//  full page scroll
-
-// Section{
-//   height: auto;
-//   max-height: auto;
-// }
-
-
-#home{
-  // height: 960px;
-}
-// #introduce,
-// #project{
-//   height: auto;
-//   max-height: none;
-// }
-
 
 
 
@@ -537,13 +518,11 @@
 @media (max-width: 1000px) {
   #main-container{
     margin-left: 0px;
-    // footer height 값 찾아서 마진 주자!
     #home{
       justify-content: center;
       .home--title{
         font-size: 80px;
         padding-bottom: 25px;
-        // padding-top: 44px;
       }
       .home--intro{
         h1{
@@ -630,13 +609,11 @@
 @media (max-width: 740px) {
   #main-container{
     margin-left: 0px;
-    // footer height 값 찾아서 마진 주자!
     #home{
       
       .home--title{
         font-size: 80px;
-      
-        // padding-top: 44px;
+
       }
       .home--intro{
         h1{
@@ -671,7 +648,7 @@
       .skill-back div:nth-of-type(2),
       .skill-etc div:nth-of-type(2){
         svg{
-          // margin-right: 10px;
+
         }
         span{
           margin: 0 8px 8px 0px; 
@@ -694,8 +671,6 @@
       .project-content{
       
         .project-content--link{
-          // width: auto;
-          // height: auto;
           margin: 11px 10px;
   
           span{
@@ -732,7 +707,6 @@
     
   #main-container{
     margin-left: 0px;
-    // footer height 값 찾아서 마진 주자!
     #home{
       padding: 0px 5px 0px 5px;
       .home--title{
@@ -776,8 +750,7 @@
           margin-right: 7px;
         }
         span{
-          // margin: 0 8px 8px 0px; 
-          // border-radius: 5px;
+    
         }
       }
     }
@@ -798,12 +771,11 @@
       .project-content{
       
         .project-content--link{
-          // width: auto;
-          // height: auto;
+         
           margin: 5px 10px;
   
           span{
-            // font-size: 20px;
+           
           }
         }
   
@@ -832,9 +804,7 @@
             }
           }
         }
-        // .contact--flip:nth-of-type(3){
-        //   padding-bottom:40px;
-        // }
+       
       }
     }
    

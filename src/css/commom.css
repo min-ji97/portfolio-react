@@ -2,6 +2,10 @@
   display: none;
 }
 
+#project-component {
+  margin: 0px 50px 0px 150px;
+}
+
 #pj-component {
   margin-bottom: 50px;
 }
@@ -36,6 +40,56 @@
 
 @media (max-width: 1000px) {
   #project-component {
-    margin: 0px 50px 0px 50px;
+    margin: 0px 20px;
+  }
+  #pj-component .pj-component--title h1 {
+    font-size: 35px;
+  }
+  #pj-component .pj-component--title span {
+    font-size: 20px;
+  }
+  #pj-component .pj-component--skill div {
+    margin-bottom: 0px;
+  }
+  #pj-component .pj-component--skill span {
+    font-size: 20px;
+  }
+}
+@media (max-width: 740px) {
+  #project-component {
+    margin: 0px 20px;
+  }
+  #pj-component {
+    margin-bottom: 0px;
+  }
+  #pj-component .pj-component--title {
+    padding: 17px 35px;
+  }
+  #pj-component .pj-component--title h1 {
+    font-size: 30px;
+  }
+  #pj-component .pj-component--title span {
+    font-size: 18px;
+  }
+  #pj-component .pj-component--skill span {
+    font-size: 18px;
+  }
+}
+@media (max-width: 450px) {
+  #project-component {
+    margin: 0px 20px;
+  }
+  #pj-component .pj-component--title {
+    padding: 15px 10px;
+  }
+  #pj-component .pj-component--title h1 {
+    font-size: 22px;
+    text-align: center;
+  }
+  #pj-component .pj-component--title span {
+    font-size: 15px;
+  }
+  #pj-component .pj-component--skill span {
+    font-size: 15px;
   }
 }

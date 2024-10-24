@@ -117,31 +117,31 @@ const PetBoard = () =>{
                 <h1>게시글 및 댓글 수정</h1> 
                 <div className='pet--modify'>  {/* 게시글 및 댓글 수정*/}
                     <div>
-                        <span>게시글 수정전 1</span>
+                        <span>게시글 수정전</span>
                         <img src={process.env.PUBLIC_URL +` /images/pet_board/게시글수정_수정전.png`} alt="" />
                     </div>
                     <div>
-                        <span>게시글 수정중 2 </span>
+                        <span>게시글 수정중</span>
                         <img src={process.env.PUBLIC_URL +` /images/pet_board/게시글수정_수정중.png`} alt="" />
                     </div>
                     <div>
-                        <span>게시글 수정완료3 </span>
+                        <span>게시글 수정완료</span>
                         <img src={process.env.PUBLIC_URL +` /images/pet_board/게시글수정_수정완료.png`} alt="" />
                     </div>
                     <div>
-                        <span>댓글 수정전 4</span>
+                        <span>댓글 수정전</span>
                         <img src={process.env.PUBLIC_URL +` /images/pet_board/댓글수정_수정전.png`} alt="" />
                     </div>
                     <div className='pet--modify--item5'>
-                        <span>댓글 수정중 5 </span>
+                        <span>댓글 수정중</span>
                         <img src={process.env.PUBLIC_URL +` /images/pet_board/댓글수정_수정중.png`} alt="" />
                     </div>
                     <div className='pet--modify--item6'>
-                        <span>댓글 수정완료 6</span>
+                        <span>댓글 수정완료</span>
                         <img src={process.env.PUBLIC_URL +` /images/pet_board/댓글수정_수정완료.png`} alt="" />
                     </div>
                     <div>
-                        <span>댓글 수정버튼 클릭 7</span>
+                        <span>댓글 수정버튼 클릭</span>
                         <img src={process.env.PUBLIC_URL +` /images/pet_board/댓글수정_수정버튼클릭.png`} alt="" />
                     </div>
                     <div className='pet--modify--item8'>

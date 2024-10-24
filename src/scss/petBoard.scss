@@ -1,12 +1,8 @@
 @import '_variables';
 
 #project-component{
-    //    width: 100%;
-    //    height: 100%;
-    
     h1{
         margin: 30px;
-
     }
     p{
         font-size: 25px;
@@ -29,150 +25,296 @@
         font-size: 24px;
         margin-left: 50px;
     }
-        .pet--login{
+    .pet--login{
+        @include flex-row;
+        div{
+            @include flex-col;
+            // width: 150%;
+            img{
+                margin-bottom: 40px;
+            }
+        }
+    }
+    .pet--register{
+        @include flex-row;
+        p{
+            margin-left: 30px;
+        }
+    }
+    .pet--homeQA{
+        @include flex-row;
+        div{
+            @include flex-col;
+        }
+    }
+    .pet--create{
+        @include flex-col;
+        margin-bottom: 30px;
+        div:first-child{
             @include flex-row;
+        }
+        div:last-child{
+            border: 1px solid rgb(204, 204, 204);
+            border-radius: 20px;
+            margin: auto;
+            padding: 25px;
+            width: 90%;
+            p{
+                font-size: 23px;
+            }
+            
+        }
+    }
+    .pet--create-comment{
+        @include flex-col;
+        div{
+            @include flex-row;
+        }
+    }
+    .pet--detail-comment{
+        @include flex-row;
+        img{ width: 60%}
+    }
+    .pet--modify{
+        // @include flex-row;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto ;
+        grid-gap: 20px;
+        margin: 50;
+        justify-items: center;
+        text-align: center;
+
+        span{
+            font-size: 25px;
+            // color: $main-color-gray;
+            font-weight: bold;
+            // text-align: center;
+        }
+
+        .pet--modify--item5{
+            grid-row: 2 /4 ;
+            grid-column: 2;
+        }
+        .pet--modify--item6{
+            grid-row: 2 / 4 ;
+            grid-column: 3;
+        }
+
+    
+        .pet--modify--item8{
+            grid-column: 1 / -1;
+            text-align: start;
+            
+            p:nth-child(1),
+            p:nth-child(3){
+                font-weight: bold;
+            }
+        }
+
+    }
+    .pet--delete{
+        div{
+            @include flex-row;
+        }
+
+    }
+
+    .pet--menu{
+        @include flex-col;
+        div{
+            height: 880px;
+            position: relative;
+            img{
+                width: 80%;
+            }
+            img:nth-child(2){
+                position: absolute;
+                width: 80%;
+                top: 203px;
+                right: 0;
+            }
+        }
+    }
+    .pet--change{
+        @include flex-col;
+        div{
+            @include flex-row;
+        }
+    }
+    .pet--myWrite{
+        @include flex-col;
+        div{
+            height: 1230px;
+            position: relative;
+            img{
+                width: 70%;
+            }
+            img:nth-child(2){
+                position: absolute;
+                width: 70%;
+                top: 433px;
+                right: 0;
+            }
+        }
+    }
+    .pet--myLike{
+        @include flex-row;
+        margin: 50px;
+    }
+
+    .goGithub{
+        @include goGithub;
+    }
+}
+
+
+//media query
+//************************--1000px--********************************************//
+
+@media (max-width: 1000px){
+    #project-component{
+        h1{
+            margin: 10px;
+            font-size: 30px;
+        }
+        p{
+            font-size: 18px;
+            margin: 0px 10px;
+            line-height: normal;
+        }
+        img{
+            width: 90%;
+            margin: 0px 2px; 
+        }
+        .pet--modify{
+            grid-gap: 0px;
+        }
+    }
+}
+
+//************************--740px--********************************************//
+
+@media (max-width: 740px){
+    #project-component{
+        img{
+            width: 90%;
+        }
+        .gray-color{
+            font-size: 18px;
+            margin: 6px 0px 6px 50px;
+        }
+        .pet--login{
+            display: block;
             div{
-                @include flex-col;
-                img{
-                    margin-bottom: 40px;
-                }
+                display: block;
             }
         }
         .pet--register{
-            @include flex-row;
-            p{
-                margin-left: 30px;
-            }
+            display: block;
         }
         .pet--homeQA{
-            @include flex-row;
-            div{
-                @include flex-col;
-            }
+            display: block;
         }
         .pet--create{
-            @include flex-col;
-            margin-bottom: 30px;
             div:first-child{
-                @include flex-row;
+                display: block;
             }
             div:last-child{
-                border: 1px solid rgb(204, 204, 204);
-                border-radius: 20px;
-                margin: auto;
-                padding: 25px;
-                width: 90%;
+                border-radius: 10px;
+                margin-top: 10px;
+                padding: 10px;
                 p{
-                    font-size: 23px;
+                    font-size: 18px;
                 }
-                
             }
         }
         .pet--create-comment{
-            @include flex-col;
             div{
-                @include flex-row;
+                display: block;
             }
         }
         .pet--detail-comment{
-            @include flex-row;
-            img{ width: 60%}
+            display: block;
         }
         .pet--modify{
-            // @include flex-row;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: auto ;
-            grid-gap: 20px;
-            margin: 50;
-            justify-items: center;
-            text-align: center;
-
+            display: block;
+            div{
+                margin-bottom: 15px;
+            }
             span{
-                font-size: 25px;
-                // color: $main-color-gray;
-                font-weight: bold;
-                // text-align: center;
+                font-size: 18px;
             }
-
-            .pet--modify--item5{
-                grid-row: 2 /4 ;
-                grid-column: 2;
-                // width: 100%;
-                // grid-area: auto;
-               
-                img{
-                    // margin-top:100px;
-                }
-            }
-            .pet--modify--item6{
-                grid-row: 2 / 4 ;
-                grid-column: 3;
-            }
-
-     
-            .pet--modify--item8{
-                grid-column: 1 / -1;
-                text-align: start;
-               
-                p:nth-child(1),
-                p:nth-child(3){
-                    font-weight: bold;
-                }
-            }
-
         }
         .pet--delete{
             div{
-                @include flex-row;
+                display: block;
             }
 
         }
-
+    
         .pet--menu{
-            @include flex-col;
             div{
-                height: 880px;
-                position: relative;
+                height: auto;
+                position: static;
                 img{
-                    width: 80%;
+                    width: 90%;
                 }
                 img:nth-child(2){
-                    position: absolute;
-                    width: 80%;
-                    top: 203px;
-                    right: 0;
+                    position: static;
+                    width: 90%;
                 }
             }
         }
         .pet--change{
-            @include flex-col;
             div{
-                @include flex-row;
+                display: block;
             }
         }
         .pet--myWrite{
-            @include flex-col;
             div{
-                height: 1230px;
-                position: relative;
+                height: auto;
+                position: static;
                 img{
-                    width: 70%;
+                    width: 90%;
                 }
                 img:nth-child(2){
-                    position: absolute;
-                    width: 70%;
-                    top: 433px;
-                    right: 0;
+                    width: 90%;
+                    position: static;
                 }
             }
         }
-        .pet--myLike{
-            @include flex-row;
-            margin: 50px;
-        }
+    }
+}
 
-        .goGithub{
-            @include goGithub;
+//************************--450px--********************************************//
+
+@media (max-width: 450px){
+    #project-component{
+        h1{
+            font-size: 20px;
+        }
+        
+        .gray-color{
+            margin: 6px 19px;
+        }
+        .pet--register{
+            p{
+                margin-left: 0px;
+            }
+        }
+        .pet--create{
+            div:last-child{
+                p{
+                    font-size: 16px;
+                } 
+            }
+        }
+       
+        .pet--detail-comment{
+            img{ 
+                width: 88%
+            }
         }
     }
+}

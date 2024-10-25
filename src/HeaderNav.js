@@ -20,11 +20,14 @@ function HeaderNav({setIsHovering, isRoutePage}) {
   useEffect(()=>{
     
     const returnIcon = document.querySelector(".return--projects");
+    // const otherNavIcon = document.querySelector(".header-nav");
 
     if( location.pathname.startsWith("/project")){
       returnIcon.style.display = "block";
+      // headerNavIcon.style.display = "none";
     }else{
       returnIcon.style.display = "none";
+      // headerNavIcon.style.display = "block";
     }
 
   },[location]);
@@ -35,15 +38,13 @@ function HeaderNav({setIsHovering, isRoutePage}) {
     const navTag = document.querySelectorAll('#header-container .header-nav svg');
     
 
-   
+
+
 
     navTag.forEach( item =>{
       item.addEventListener('mouseenter',() => { setIsHovering('navHover') });
       item.addEventListener('mouseleave',()=>{setIsHovering(null);})
     }); 
-
-
-
 
 
 

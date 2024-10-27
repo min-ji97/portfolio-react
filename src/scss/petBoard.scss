@@ -5,7 +5,7 @@
         margin: 30px;
     }
     p{
-        font-size: 25px;
+        // font-size: 25px;
         margin: 5px 10px;
         line-height: 40px;
     }
@@ -176,7 +176,7 @@
     #project-component{
         h1{
             margin: 10px;
-            font-size: 30px;
+            // font-size: 30px;
         }
         p{
             font-size: 18px;
@@ -189,7 +189,22 @@
         }
         .pet--modify{
             grid-gap: 0px;
+            span{
+                font-size: 20px;
+            }
+            
         }
+        .pet--menu{
+            div{
+                height: 556px;
+            }
+        }
+        .pet--myWrite{
+            div{
+                height: 820px;
+            }
+        }
+
     }
 }
 
@@ -292,7 +307,7 @@
 @media (max-width: 450px){
     #project-component{
         h1{
-            font-size: 20px;
+            // font-size: 20px;
         }
         
         .gray-color{

@@ -21,7 +21,7 @@ const PetBoard = () =>{
         ]
     };
     return (
-        <div id='project-component'>
+        <div id='project-component' className='project-petboard'>
             <Commom listData={lists}/>
 
             <div>

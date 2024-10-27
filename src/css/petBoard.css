@@ -2,90 +2,90 @@
   display: none;
 }
 
-#project-component h1 {
+.project-petboard h1 {
   margin: 30px;
 }
-#project-component p {
+.project-petboard p {
   margin: 5px 10px;
   line-height: 40px;
 }
-#project-component hr {
+.project-petboard hr {
   margin-top: 80px;
 }
-#project-component strong {
+.project-petboard strong {
   color: red;
 }
-#project-component img {
+.project-petboard img {
   width: 100%;
   margin: 10px 5px;
   border: 1px solid black;
 }
-#project-component .gray-color {
+.project-petboard .gray-color {
   color: gray;
   font-size: 24px;
   margin-left: 50px;
 }
-#project-component .pet--login {
+.project-petboard .pet--login {
   display: flex;
   flex-direction: row;
 }
-#project-component .pet--login div {
+.project-petboard .pet--login div {
   display: flex;
   flex-direction: column;
 }
-#project-component .pet--login div img {
+.project-petboard .pet--login div img {
   margin-bottom: 40px;
 }
-#project-component .pet--register {
+.project-petboard .pet--register {
   display: flex;
   flex-direction: row;
 }
-#project-component .pet--register p {
+.project-petboard .pet--register p {
   margin-left: 30px;
 }
-#project-component .pet--homeQA {
+.project-petboard .pet--homeQA {
   display: flex;
   flex-direction: row;
 }
-#project-component .pet--homeQA div {
+.project-petboard .pet--homeQA div {
   display: flex;
   flex-direction: column;
 }
-#project-component .pet--create {
+.project-petboard .pet--create {
   display: flex;
   flex-direction: column;
   margin-bottom: 30px;
 }
-#project-component .pet--create div:first-child {
+.project-petboard .pet--create div:first-child {
   display: flex;
   flex-direction: row;
 }
-#project-component .pet--create div:last-child {
+.project-petboard .pet--create div:last-child {
   border: 1px solid rgb(204, 204, 204);
   border-radius: 20px;
   margin: auto;
   padding: 25px;
   width: 90%;
 }
-#project-component .pet--create div:last-child p {
+.project-petboard .pet--create div:last-child p {
   font-size: 23px;
 }
-#project-component .pet--create-comment {
+.project-petboard .pet--create-comment {
   display: flex;
   flex-direction: column;
 }
-#project-component .pet--create-comment div {
+.project-petboard .pet--create-comment div {
   display: flex;
   flex-direction: row;
 }
-#project-component .pet--detail-comment {
+.project-petboard .pet--detail-comment {
   display: flex;
   flex-direction: row;
 }
-#project-component .pet--detail-comment img {
+.project-petboard .pet--detail-comment img {
   width: 60%;
 }
-#project-component .pet--modify {
+.project-petboard .pet--modify {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
@@ -94,215 +94,190 @@
   justify-items: center;
   text-align: center;
 }
-#project-component .pet--modify span {
+.project-petboard .pet--modify span {
   font-size: 25px;
   font-weight: bold;
 }
-#project-component .pet--modify .pet--modify--item5 {
+.project-petboard .pet--modify .pet--modify--item5 {
   grid-row: 2/4;
   grid-column: 2;
 }
-#project-component .pet--modify .pet--modify--item6 {
+.project-petboard .pet--modify .pet--modify--item6 {
   grid-row: 2/4;
   grid-column: 3;
 }
-#project-component .pet--modify .pet--modify--item8 {
+.project-petboard .pet--modify .pet--modify--item8 {
   grid-column: 1/-1;
   text-align: start;
 }
-#project-component .pet--modify .pet--modify--item8 p:nth-child(1),
-#project-component .pet--modify .pet--modify--item8 p:nth-child(3) {
+.project-petboard .pet--modify .pet--modify--item8 p:nth-child(1),
+.project-petboard .pet--modify .pet--modify--item8 p:nth-child(3) {
   font-weight: bold;
 }
-#project-component .pet--delete div {
+.project-petboard .pet--delete div {
   display: flex;
   flex-direction: row;
 }
-#project-component .pet--menu {
+.project-petboard .pet--menu {
   display: flex;
   flex-direction: column;
 }
-#project-component .pet--menu div {
+.project-petboard .pet--menu div {
   height: 880px;
   position: relative;
 }
-#project-component .pet--menu div img {
+.project-petboard .pet--menu div img {
   width: 80%;
 }
-#project-component .pet--menu div img:nth-child(2) {
+.project-petboard .pet--menu div img:nth-child(2) {
   position: absolute;
   width: 80%;
   top: 203px;
   right: 0;
 }
-#project-component .pet--change {
+.project-petboard .pet--change {
   display: flex;
   flex-direction: column;
 }
-#project-component .pet--change div {
+.project-petboard .pet--change div {
   display: flex;
   flex-direction: row;
 }
-#project-component .pet--myWrite {
+.project-petboard .pet--myWrite {
   display: flex;
   flex-direction: column;
 }
-#project-component .pet--myWrite div {
+.project-petboard .pet--myWrite div {
   height: 1230px;
   position: relative;
 }
-#project-component .pet--myWrite div img {
+.project-petboard .pet--myWrite div img {
   width: 70%;
 }
-#project-component .pet--myWrite div img:nth-child(2) {
+.project-petboard .pet--myWrite div img:nth-child(2) {
   position: absolute;
   width: 70%;
   top: 433px;
   right: 0;
 }
-#project-component .pet--myLike {
+.project-petboard .pet--myLike {
   display: flex;
   flex-direction: row;
   margin: 50px;
 }
-#project-component .goGithub {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin: 50px 0px;
-}
-#project-component .goGithub button {
-  width: 200px;
-  height: 100px;
-  font-size: 20px;
-  border-radius: 6px;
-  background-color: transparent;
-}
-#project-component .goGithub button a {
-  text-decoration: none;
-  color: black;
-}
-#project-component .goGithub button:hover {
-  background-color: black;
-  border: 1px solid white;
-  transition-duration: 0.3s;
-}
-#project-component .goGithub button:hover a {
-  color: white;
-}
 
 @media (max-width: 1000px) {
-  #project-component h1 {
+  .project-petboard h1 {
     margin: 10px;
   }
-  #project-component p {
+  .project-petboard p {
     font-size: 18px;
     margin: 0px 10px;
     line-height: normal;
   }
-  #project-component img {
+  .project-petboard img {
     width: 90%;
     margin: 0px 2px;
   }
-  #project-component .pet--modify {
+  .project-petboard .pet--modify {
     grid-gap: 0px;
   }
-  #project-component .pet--modify span {
+  .project-petboard .pet--modify span {
     font-size: 20px;
   }
-  #project-component .pet--menu div {
+  .project-petboard .pet--menu div {
     height: 556px;
   }
-  #project-component .pet--myWrite div {
+  .project-petboard .pet--myWrite div {
     height: 820px;
   }
 }
 @media (max-width: 740px) {
-  #project-component img {
+  .project-petboard img {
     width: 90%;
   }
-  #project-component .gray-color {
+  .project-petboard .gray-color {
     font-size: 18px;
     margin: 6px 0px 6px 50px;
   }
-  #project-component .pet--login {
+  .project-petboard .pet--login {
     display: block;
   }
-  #project-component .pet--login div {
+  .project-petboard .pet--login div {
     display: block;
   }
-  #project-component .pet--register {
+  .project-petboard .pet--register {
     display: block;
   }
-  #project-component .pet--homeQA {
+  .project-petboard .pet--homeQA {
     display: block;
   }
-  #project-component .pet--create div:first-child {
+  .project-petboard .pet--create div:first-child {
     display: block;
   }
-  #project-component .pet--create div:last-child {
+  .project-petboard .pet--create div:last-child {
     border-radius: 10px;
     margin-top: 10px;
     padding: 10px;
   }
-  #project-component .pet--create div:last-child p {
+  .project-petboard .pet--create div:last-child p {
     font-size: 18px;
   }
-  #project-component .pet--create-comment div {
+  .project-petboard .pet--create-comment div {
     display: block;
   }
-  #project-component .pet--detail-comment {
+  .project-petboard .pet--detail-comment {
     display: block;
   }
-  #project-component .pet--modify {
+  .project-petboard .pet--modify {
     display: block;
   }
-  #project-component .pet--modify div {
+  .project-petboard .pet--modify div {
     margin-bottom: 15px;
   }
-  #project-component .pet--modify span {
+  .project-petboard .pet--modify span {
     font-size: 18px;
   }
-  #project-component .pet--delete div {
+  .project-petboard .pet--delete div {
     display: block;
   }
-  #project-component .pet--menu div {
+  .project-petboard .pet--menu div {
     height: auto;
     position: static;
   }
-  #project-component .pet--menu div img {
+  .project-petboard .pet--menu div img {
     width: 90%;
   }
-  #project-component .pet--menu div img:nth-child(2) {
+  .project-petboard .pet--menu div img:nth-child(2) {
     position: static;
     width: 90%;
   }
-  #project-component .pet--change div {
+  .project-petboard .pet--change div {
     display: block;
   }
-  #project-component .pet--myWrite div {
+  .project-petboard .pet--myWrite div {
     height: auto;
     position: static;
   }
-  #project-component .pet--myWrite div img {
+  .project-petboard .pet--myWrite div img {
     width: 90%;
   }
-  #project-component .pet--myWrite div img:nth-child(2) {
+  .project-petboard .pet--myWrite div img:nth-child(2) {
     width: 90%;
     position: static;
   }
 }
 @media (max-width: 450px) {
-  #project-component .gray-color {
+  .project-petboard .gray-color {
     margin: 6px 19px;
   }
-  #project-component .pet--register p {
+  .project-petboard .pet--register p {
     margin-left: 0px;
   }
-  #project-component .pet--create div:last-child p {
+  .project-petboard .pet--create div:last-child p {
     font-size: 16px;
   }
-  #project-component .pet--detail-comment img {
+  .project-petboard .pet--detail-comment img {
     width: 88%;
   }
 }

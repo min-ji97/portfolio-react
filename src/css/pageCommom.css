@@ -1,3 +1,7 @@
+.visible-none {
+  display: none;
+}
+
 body {
   background-color: white;
 }
@@ -10,9 +14,35 @@ span {
   font-size: 20px;
 }
 
+#project-component .goGithub {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 50px 0px;
+}
+#project-component .goGithub button {
+  width: 200px;
+  height: 100px;
+  font-size: 20px;
+  border-radius: 6px;
+  background-color: transparent;
+}
+#project-component .goGithub button a {
+  text-decoration: none;
+  color: black;
+}
+#project-component .goGithub button:hover {
+  background-color: black;
+  border: 1px solid white;
+  transition-duration: 0.3s;
+}
+#project-component .goGithub button:hover a {
+  color: white;
+}
+
 @media (max-width: 1000px) {
   h1 {
-    font-size: 30px;
+    font-size: 26px;
   }
   p {
     font-size: 18px;
@@ -21,5 +51,8 @@ span {
 @media (max-width: 450px) {
   h1 {
     font-size: 20px;
+  }
+  span {
+    font-size: 16px;
   }
 }

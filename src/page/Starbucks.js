@@ -2,7 +2,7 @@
 import React from 'react';
 import Commom from './Commom';
 import '../css/pageCommom.css';
-
+import '../css/starbucks.css';
 
 const Starbucks = () =>{
     const lists = {
@@ -21,10 +21,15 @@ const Starbucks = () =>{
             <Commom listData={lists}/>
 
             <div>
+                <div id='starbucks-component'>
+                    <img src={process.env.PUBLIC_URL +` /images/starbucks/Animation1.gif`} alt="" />
+                    <img src={process.env.PUBLIC_URL +` /images/starbucks/Animation2.gif`} alt="" />
+                    <img src={process.env.PUBLIC_URL +` /images/starbucks/Animation3.gif`} alt="" />
+                </div>
 
-            <hr />
+                <hr />
                 <div className='goGithub'>
-                    <button><a href="https://github.com/min-ji97/pet_board" target="_blank">GitHub로 이동하기</a></button>
+                    <button><a href="https://github.com/min-ji97/Starbucks_clone" target="_blank">GitHub로 이동하기</a></button>
                 </div>
             </div>
         </div>

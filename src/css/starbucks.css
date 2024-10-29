@@ -1,0 +1,23 @@
+.visible-none {
+  display: none;
+}
+
+#starbucks-component {
+  display: flex;
+  flex-direction: column;
+}
+#starbucks-component img {
+  width: 80%;
+  margin-bottom: 30px;
+}
+
+/************************************************************/
+@media (max-width: 1000px) {
+  #starbucks-component {
+    margin-top: 30px;
+    align-items: center;
+  }
+  #starbucks-component img {
+    width: 90%;
+  }
+}

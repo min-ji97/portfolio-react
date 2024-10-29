@@ -116,7 +116,7 @@ const Noorida = () =>{
 
                 <hr />
                 <div className='goGithub'>
-                    <button><a href="https://github.com/min-ji97/pet_board" target="_blank">GitHub로 이동하기</a></button>
+                    <button><a href="https://github.com/JJ-Min/noorida" target="_blank">GitHub로 이동하기</a></button>
                 </div>
             </div>
         </div>

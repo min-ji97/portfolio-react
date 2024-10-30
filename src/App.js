@@ -31,9 +31,7 @@ const App = () =>{
     return(
         
         <div id="app-container">
-            <BrowserRouter >
-                
-                
+            <BrowserRouter basename={process.env.PUBLIC_URL}>
                 <CustomCursor isHovering={isHovering} />
                 <HeaderNav setIsHovering={setIsHovering} isRoutePage={isRoutePage}/>
                 <div>

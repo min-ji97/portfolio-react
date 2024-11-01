@@ -72,42 +72,42 @@ const Noorida = () =>{
                 <div className='noorida-content'>
                     <h1>로그인 및 회원가입</h1>
                     <div>
-                        <img src={process.env.PUBLIC_URL +` /images/noorida/예시1.png`} alt="" />
+                        <img src={`${process.env.PUBLIC_URL}/images/noorida/예시1.png`} alt="" />
                     </div>
 
                     <h1>아이디 및 비밀번호 찾기</h1>
                     <div>
-                        <img src={process.env.PUBLIC_URL +` /images/noorida/예시2.png`} alt="" />
+                        <img src={`${process.env.PUBLIC_URL}/images/noorida/예시2.png`} alt="" />
                     </div>
 
                     <h1>게시물 미리보기 및 사이드 메뉴</h1>
                     <div>
-                        <img src={process.env.PUBLIC_URL +` /images/noorida/예시3.png`} alt="" />
+                        <img src={`${process.env.PUBLIC_URL}/images/noorida/예시3.png`} alt="" />
                     </div>
 
                     <h1>프로필 페이지</h1>
                     <div>
-                        <img src={process.env.PUBLIC_URL +` /images/noorida/졸업작품_3.png`} alt="" />
+                        <img src={`${process.env.PUBLIC_URL}/images/noorida/졸업작품_3.png`} alt="" />
                         <div>나의 프로필</div>
                     </div>
                     <div>
-                        <img src={process.env.PUBLIC_URL +` /images/noorida/예시6.png`} alt="" />
+                        <img src={`${process.env.PUBLIC_URL}/images/noorida/예시6.png`} alt="" />
                         <div>다른사람의 프로필</div>
                     </div>
 
                     <h1>게시글 작성</h1>
                     <div>
-                        <img src={process.env.PUBLIC_URL +` /images/noorida/예시5.png`} alt="" />
+                        <img src={`${process.env.PUBLIC_URL}/images/noorida/예시5.png`} alt="" />
                     </div>
 
                     <h1>게시물</h1>
                     <div>
-                        <img src={process.env.PUBLIC_URL +` /images/noorida/예시4.png`} alt="" />
+                        <img src={`${process.env.PUBLIC_URL}/images/noorida/예시4.png`} alt="" />
                     </div>
 
                     <h1>검색</h1>
                     <div>
-                        <img src={process.env.PUBLIC_URL +` /images/noorida/예시7.png`} alt="" />
+                        <img src={`${process.env.PUBLIC_URL}/images/noorida/예시7.png`} alt="" />
                     </div>
                 </div>
                 

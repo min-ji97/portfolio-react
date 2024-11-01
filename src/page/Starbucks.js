@@ -22,9 +22,9 @@ const Starbucks = () =>{
 
             <div>
                 <div id='starbucks-component'>
-                    <img src={process.env.PUBLIC_URL +` /images/starbucks/Animation1.gif`} alt="" />
-                    <img src={process.env.PUBLIC_URL +` /images/starbucks/Animation2.gif`} alt="" />
-                    <img src={process.env.PUBLIC_URL +` /images/starbucks/Animation3.gif`} alt="" />
+                    <img src={`${process.env.PUBLIC_URL}/images/starbucks/Animation1.gif`} alt="" />
+                    <img src={`${process.env.PUBLIC_URL}/images/starbucks/Animation2.gif`} alt="" />
+                    <img src={`${process.env.PUBLIC_URL}/images/starbucks/Animation3.gif`} alt="" />
                 </div>
 
                 <hr />

@@ -27,9 +27,9 @@ const PetBoard = () =>{
             <div>
                 <h1>로그인</h1>
                 <div className='pet--login'> {/* 로그인 */}
-                    <img src={process.env.PUBLIC_URL +` /images/pet_board/로그아웃_홈화면.png`} alt="" />
+                    <img src={process.env.PUBLIC_URL+`/images/pet_board/로그아웃_홈화면.png`} alt="" />
                     <div>
-                        <img src={process.env.PUBLIC_URL +` /images/pet_board/로그인.png`} alt="" />
+                        <img src={process.env.PUBLIC_URL +`/images/pet_board/로그인.png`} alt="" />
                         <p>사용자의 인증을 구현해주는 <strong>passport</strong> 미들웨어를 사용하였습니다.</p>
                         <p>
                             아이디와 비밀번호의 인증을 확인하고, 사용자 정보를 세션에 저장해줍니다.

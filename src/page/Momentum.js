@@ -9,14 +9,12 @@ const Momentum = () =>{
     const lists = {
         titleH1: 'Momentum - To Do List',
         titleSpan: 
-        'ㅎ',
+        '일정 관리와 현재 위치 날씨 조회, 주요 사이트 북마크 기능을 제공하는 프로젝트입니다.',
         skill: [
             'IDE : Visual Studio Code',
-            'Database : MySQL',
             '협업 관리 툴 : Git',
-            'Client :  NPM / WebPack / Vue.js /Vuex',
-            'Server : Node.js / Express.js / MySQL',
-            'API : Axios'        
+            'HTML, scss , JavaScript',
+            'OpenWeather API',
         ]
     };
     return (
@@ -24,9 +22,16 @@ const Momentum = () =>{
             <Commom listData={lists}/>
 
             <div id='momentum-component'>
+                <div>
+                    <img src={`${process.env.PUBLIC_URL}/images/momentum/thumbnail.png`} alt="" />
+                    <span>OpenWeather API를 사용하여, 해당 지역의 위치와 날씨를 보여주도록 하였습니다.</span>
+                </div>
+                {/* <div>
+                    <img src={`${process.env.PUBLIC_URL}/images/naver/실시간예보.png`} alt="" />
+                    <span>설명?</span>
+                </div> */}
 
-
-            </div>
+                </div>
             <div className='goToLinks'>
                 <div className='goGithub'>
                     <button><a href="https://min-ji97.github.io/momentum/" target="_blank">해당 페이지로 이동   </a></button>            

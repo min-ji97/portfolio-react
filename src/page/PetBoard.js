@@ -158,11 +158,11 @@ const PetBoard = () =>{
                 <h1>게시글 및 댓글 삭제</h1> 
                 <div className='pet--delete'>  {/* 게시글 및 댓글 수정*/}
                     <div>
-                        <img src={process.env.PUBLIC_URL +`${process.env.PUBLIC_URL}/images/pet_board/게시글삭제_알림.png`} alt="" />
-                        <img src={process.env.PUBLIC_URL +`${process.env.PUBLIC_URL}/images/pet_board/게시글삭제_완료.png`} alt="" />
+                        <img src={`${process.env.PUBLIC_URL}/images/pet_board/게시글삭제_알림.png`} alt="" />
+                        <img src={`${process.env.PUBLIC_URL}/images/pet_board/게시글삭제_완료.png`} alt="" />
                        
                     </div>
-                    <img src={process.env.PUBLIC_URL +`${process.env.PUBLIC_URL}/images/pet_board/게시글삭제_DB.png`} alt="" />
+                    <img src={`${process.env.PUBLIC_URL}/images/pet_board/게시글삭제_DB.png`} alt="" />
                     <div>
                         <img src={`${process.env.PUBLIC_URL}/images/pet_board/댓글삭제_전.png`} alt="" />
                         <img src={`${process.env.PUBLIC_URL}/images/pet_board/댓글삭제_중.png`} alt="" />

@@ -34,9 +34,9 @@ const Momentum = () =>{
                 </div>
             <div className='goToLinks'>
                 <div className='goGithub'>
-                    <button><a href="https://min-ji97.github.io/momentum/" target="_blank">해당 페이지로 이동   </a></button>            
+                    <button><a href="https://min-ji97.github.io/momentum/" target="_blank">해당 페이지로 이동</a></button>            
                 </div>
-                <div className='goGithub'>
+                <div className='goPage'>
                     <button><a href="https://github.com/min-ji97/momentum" target="_blank">GitHub로 이동하기</a></button>
                 </div>
             </div>

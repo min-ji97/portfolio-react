@@ -14,29 +14,33 @@ span {
   font-size: 20px;
 }
 
-#project-component .goGithub {
+#project-component .goToLinks {
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  width: 100%;
+}
+#project-component .goGithub, #project-component .goPage {
+  display: flex;
   margin: 50px 0px;
 }
-#project-component .goGithub button {
-  width: 200px;
-  height: 100px;
-  font-size: 20px;
-  border-radius: 6px;
+#project-component .goGithub button, #project-component .goPage button {
+  width: 150px;
+  height: 150px;
+  font-size: 15px;
+  border-radius: 100px;
+  margin-right: 20px;
   background-color: transparent;
 }
-#project-component .goGithub button a {
+#project-component .goGithub button a, #project-component .goPage button a {
   text-decoration: none;
   color: black;
 }
-#project-component .goGithub button:hover {
+#project-component .goGithub button:hover, #project-component .goPage button:hover {
   background-color: black;
   border: 1px solid white;
   transition-duration: 0.3s;
 }
-#project-component .goGithub button:hover a {
+#project-component .goGithub button:hover a, #project-component .goPage button:hover a {
   color: white;
 }
 
@@ -54,5 +58,10 @@ span {
   }
   span {
     font-size: 16px;
+  }
+  #project-component .goGithub button, #project-component .goPage button {
+    width: 120px;
+    height: 120px;
+    font-size: 12px;
   }
 }

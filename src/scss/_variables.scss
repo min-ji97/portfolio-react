@@ -56,31 +56,31 @@ $contact-card-background-color: linear-gradient(45deg, #f3f5f0 50%, rgb(227, 227
 
 // project content -- go to git btn
 @mixin goGithub{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin: 50px 0px;
-    button{
-        width: 200px;
-        height: 100px;
-        font-size: 20px;
-        border-radius: 6px;
-        background-color: transparent;
+//     display: flex;
+//     justify-content: center;
+//     width: 100%;
+//     margin: 50px 0px;
+//     button{
+//         width: 200px;
+//         height: 100px;
+//         font-size: 20px;
+//         border-radius: 6px;
+//         background-color: transparent;
        
-        a{
-            text-decoration: none;
-            color: black;
-        }
-    }
+//         a{
+//             text-decoration: none;
+//             color: black;
+//         }
+//     }
 
-    button:hover{
-        background-color: black;
-        border: 1px solid white;
-        transition-duration: 0.3s;
-        a{
-            color: white;
-        }
-    }
+//     button:hover{
+//         background-color: black;
+//         border: 1px solid white;
+//         transition-duration: 0.3s;
+//         a{
+//             color: white;
+//         }
+//     }
 }
 
 

@@ -24,10 +24,14 @@ const Portfolio = () =>{
 
 
 
-            <hr />
-                <div className='goGithub'>
-                    <button><a href="https://github.com/min-ji97/portfolio-react" target="_blank">GitHub로 이동하기</a></button>
+                <hr />
+
+                <div className='goToLinks'> 
+                    <div className='goGithub'>
+                        <button><a href="https://github.com/min-ji97/portfolio-react" target="_blank">GitHub로 이동하기</a></button>
+                    </div>
                 </div>
+
             </div>
         </div>
     )

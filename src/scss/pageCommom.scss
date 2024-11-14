@@ -20,8 +20,36 @@ span{
 // }
 
 #project-component{
-    .goGithub{
-        @include goGithub;
+    .goToLinks{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .goGithub,.goPage{
+        display: flex;
+        margin: 50px 0px;
+        button{
+            width: 150px;
+            height: 150px;
+            font-size: 15px;
+            border-radius: 100px;
+            margin-right: 20px;
+            background-color: transparent;
+           
+            a{
+                text-decoration: none;
+                color: black;
+            }
+        }
+    
+        button:hover{
+            background-color: black;
+            border: 1px solid white;
+            transition-duration: 0.3s;
+            a{
+                color: white;
+            }
+        }
     }
     
 }
@@ -48,4 +76,16 @@ span{
     span{
         font-size: 16px;
     }
+
+        
+    #project-component{
+        .goGithub,.goPage{
+            button{
+                width: 120px;
+                height: 120px;
+                font-size: 12px;
+            }
+        }
+    }
+
 }

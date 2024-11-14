@@ -35,8 +35,8 @@ const Naver = () =>{
                 </div>
 
             <hr />
-            <div className='gotoLinks'>
-                <div className='goGithub'>
+            <div className='goToLinks'>
+                <div className='goPage'>
                     <button><a href="https://min-ji97.github.io/Naver_clone/" target="_blank">해당 페이지로 이동</a></button>
                 </div>
                 <div className='goGithub'>

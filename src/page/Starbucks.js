@@ -28,9 +28,13 @@ const Starbucks = () =>{
                 </div>
 
                 <hr />
-                <div className='goGithub'>
-                    <button><a href="https://github.com/min-ji97/Starbucks_clone" target="_blank">GitHub로 이동하기</a></button>
+
+                <div className='goToLinks'>
+                    <div className='goGithub'>
+                        <button><a href="https://github.com/min-ji97/Starbucks_clone" target="_blank">GitHub로 이동하기</a></button>
+                    </div>
                 </div>
+                
             </div>
         </div>
     )

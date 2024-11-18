@@ -181,3 +181,37 @@
     }
 
 }
+
+
+
+
+@media (max-width:450px) {
+
+    #header-container {
+        height: 74px;
+       .header-nav {
+
+            div{
+                width: 73px;
+                height: 50px;
+                margin: 10px 0px;
+               
+                a{
+                    .icon{
+                        font-size: 45px
+                   }
+                }
+            }
+        }
+
+        .return--projects{
+          
+            // position: static;
+            // top: 0px;
+            // left: 22px;
+            // width: auto;
+            // height: auto !important;
+        }
+    }
+
+}

@@ -139,3 +139,16 @@
     height: auto !important;
   }
 }
+@media (max-width: 450px) {
+  #header-container {
+    height: 74px;
+  }
+  #header-container .header-nav div {
+    width: 73px;
+    height: 50px;
+    margin: 10px 0px;
+  }
+  #header-container .header-nav div a .icon {
+    font-size: 45px;
+  }
+}

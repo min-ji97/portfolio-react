@@ -395,9 +395,6 @@ const Main = ( {setIsHovering} ) => {
     <div id='main-container' ref={mainHeaderRef}>
       {/* <SectionsContainer {...options}> <Section  > */}
           <section id="home">
-            <canvas className='home--canvas'>
-              
-            </canvas>
             <div className="home--title">
               <div>MINJI's</div>
               <div>Portfolio</div>

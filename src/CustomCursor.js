@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import './css/cursor.css';
 import styled from 'styled-components';
 
-
+import { useLocation } from "react-router-dom";
 
 
 const NewCursor = styled.div`
@@ -104,12 +104,12 @@ const NewCursor = styled.div`
 const CustomCursor = ({isHovering}) =>{
 
   const mouseRef = useRef(null);
+  const location = useLocation();
 
   useEffect(()=>{
     const onMouseMove = (e) =>{
-    
-      
-      const span = document.querySelector('#introduce');
+
+      // const span = document.querySelector('#introduce');
       if(mouseRef.current){
         mouseRef.current.style.left = e.pageX + "px";
         mouseRef.current.style.top = e.pageY  + "px";
@@ -119,9 +119,19 @@ const CustomCursor = ({isHovering}) =>{
 
     return () => {
       document.removeEventListener('mousemove', onMouseMove);
+     
     };
   },[]);
 
+  useEffect(()=>{
+
+    return () =>{
+      if (mouseRef.current) {
+        mouseRef.current.style.left = "0px";
+        mouseRef.current.style.top = "0px";
+      }
+    }
+  },[location]);
   
     return (
         <div>

@@ -22,6 +22,22 @@ const Portfolio = () =>{
 
             <div>
 
+                <div>
+                    <h1>PC 버전</h1>
+                    <video width="800px" height="450px" src={`${process.env.PUBLIC_URL}/images/portfolio/포트폴리오_pc.mp4`} controls muted loop ></video>
+                </div>
+                
+                <div>
+                    <h1>모바일 버전</h1>
+                    <video width="250px" height="450px" src={`${process.env.PUBLIC_URL}/images/portfolio/포트폴리오_모바일.mp4`} controls muted loop ></video>
+                </div>
+                
+
+                <div>
+                    <h1>탭 버전?</h1>
+                    <video width="400px" height="500px" src={`${process.env.PUBLIC_URL}/images/portfolio/포트폴리오_탭.mp4`} controls muted loop ></video>
+                </div>
+                
 
 
                 <hr />

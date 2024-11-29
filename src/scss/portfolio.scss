@@ -1,1 +1,54 @@
 @import "_variables";
+
+
+.project-portfolio{
+
+    .portfolio--version{
+        
+        // align-self: center;
+        width: 100%;
+
+        .ver--1, .ver--2, .ver--3{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-bottom: 60px;
+            h1{
+                text-align: center;
+                margin-bottom: 10px;
+            }
+            video{
+                margin-left: 30px;
+            }
+        }
+        .ver--1{
+            width: 90%;
+        }
+        .ver--2{
+            width: 300px;
+            display: flex;
+        }
+        .ver--3{
+            width: 300px;
+        }
+
+        
+    }
+    
+}
+
+@media (max-width: 1000px){
+
+
+
+}
+
+@media (max-width: 740px){
+
+
+
+}
+
+@media (max-width: 450px){
+ 
+}
